@@ -100,7 +100,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 88px; 
+    gap: 88px;
 }
 
 .definition {
@@ -129,7 +129,7 @@ main {
     height: 16px;
 }
 
-.definition-text h3 {
+.definition-text .header {
     font-family: 'Palanquin', sans-serif;
     font-size: 40px;
     font-weight: 600;
@@ -146,7 +146,7 @@ main {
     color: rgba(241, 201, 83, 1);
 }
 
-.definition-text p {
+.definition-text .p-content {
     font-family: 'Palanquin', sans-serif;
     font-size: 32px;
     font-weight: 400;
@@ -222,7 +222,8 @@ main {
     align-items: center;
     gap: 64px;
 }
-.slider-title{
+
+.slider-title {
     font-family: 'Arima', sans-serif;
     font-weight: 600;
     font-style: bold;
@@ -271,15 +272,17 @@ main {
     transform: perspective(250px) rotateY(-20deg) translateX(20px);
 
 }
-.info{
+
+.info {
     font-family: 'Palanquin', sans-serif;
     font-weight: 400;
     font-style: normal;
     line-height: 120%;
     letter-spacing: 0%;
-    color: rgba(61, 61, 61, 1);    
+    color: rgba(61, 61, 61, 1);
 }
-.info-list{
+
+.info-list {
     font-family: 'Palanquin', sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -288,7 +291,8 @@ main {
     color: rgba(61, 61, 61, 1);
     width: 1000px;
 }
-.info-list > span{
+
+.info-list>span {
     font-family: 'Palanquin', sans-serif;
     font-weight: 700;
     font-style: bold;
@@ -296,10 +300,12 @@ main {
     letter-spacing: 0%;
     color: rgba(61, 61, 61, 1);
 }
-.pro-tipps{
+
+.pro-tipps {
     width: 1130px;
 }
-.pro-tipps-title{
+
+.pro-tipps-title {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -309,9 +315,10 @@ main {
     height: 66px;
     transform: rotate(-13.67deg);
     top: -0px;
-    
+
 }
-.pro-tipps-title > p{
+
+.pro-tipps-title>p {
     font-family: 'Palanquin', sans-serif;
     font-weight: 700;
     font-style: bold;
@@ -319,16 +326,18 @@ main {
     line-height: 120%;
     letter-spacing: 0%;
     color: rgba(241, 201, 83, 1);
-    
+
 }
-.pro-tipps-title>img{
+
+.pro-tipps-title>img {
     width: 43.75px;
     height: 42.19px;
     transform: rotate(8deg);
     margin-right: 8px;
     margin-left: 8px;
 }
-.pro-tipps-list{
+
+.pro-tipps-list {
     width: 1083px;
     display: flex;
     justify-content: left;
@@ -345,11 +354,68 @@ main {
     letter-spacing: 0%;
     color: rgba(61, 61, 61, 1);
 }
-.pro-tipps-list > ol > li > span{
+
+.pro-tipps-list>ol>li>span {
     font-family: 'Palanquin', sans-serif;
     font-weight: 700;
     font-style: bold;
     line-height: 120%;
     letter-spacing: 0%;
     color: rgba(78, 164, 135, 1);
+}
+
+.follow-and-share {
+    width: 493px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+.follow-text {
+    font-family: 'Arima', sans-serif;
+    font-weight: 500;
+    font-style: medium;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: rgba(84, 55, 13, 1);
+    text-align: center;
+}
+
+.follow-arrow {
+    width: 106.9px;
+    height: 65.03px;
+    border: 3px;
+    rotate: 5deg;
+    margin-left: -350px;
+    margin-top: -50px;
+}
+
+.share-button {
+    width: 158px;
+    height: 48px;
+    margin-top: -70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    gap: 10px;
+    background-color: rgba(78, 164, 135, 1);
+    color: rgba(241, 201, 83, 1);
+}
+
+.share-button p {
+    font-family: 'Arima', sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    line-height: 120%;
+    letter-spacing: 5%;
+    font-size: 24px;
+    color: rgba(241, 201, 83, 1);
+}
+
+.share-button img {
+    width: 32px;
+    height: 32px;
 }
