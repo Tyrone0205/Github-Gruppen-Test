@@ -148,3 +148,20 @@ main {
     line-height: 120%;
     color: rgba(84, 55, 13, 1);
 }
+.definition-info {
+    display: flex;
+    gap: 32px;
+}
+
+.definition-info-item {
+    display: flex;
+    gap: 6px;
+}
+
+.definition-info-item p {
+    font-family: 'Palanquin', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    color: rgba(84, 55, 13, 1);
+}
