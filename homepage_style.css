@@ -218,33 +218,42 @@ main {
 
 .slider_highlights_wrapper {
     z-index: 1;
-    position: absolute; /*Wir wollen den wrapper aus den dokumenten fluss rausnehmen*/
-    width: 400%; /*Wegen 4 Bilder*/
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 400%; /* Vier Bilder nebeneinander */
     height: 100%;
-    display: flex; /*Damit die Bilder übereinander liegen*/
-    transition: all 1s ease-in-out;
+
+    display: flex;
+    transition: transform 1s ease-in-out;
 }
 
 .slider_highlights_element {
+    width: 25%; /* Jedes Bild nimmt ein Viertel des Wrappers ein */
     height: 100%;
-    width: calc(100% /4); /*Damit wir wieder 100% vom slider haben*/
+
+    flex-shrink: 0; /* Verhindert das Verkleinern der Bilder */
+    object-fit: cover; /* Füllt den Slider ohne Bildverzerrung */
 }
 
-.slider_highlights input[value="one"]:checked~.slider_highlights_wrapper {
-    transform: translateX(calc(100% /4));
+
+.slider_highlights input[value="one"]:checked ~ .slider_highlights_wrapper {
+    transform: translateX(0);
 }
 
-.slider_highlights input[value="two"]:checked~.slider_highlights_wrapper {
-    transform: translateX(calc(100% /4));
+.slider_highlights input[value="two"]:checked ~ .slider_highlights_wrapper {
+    transform: translateX(-25%);
 }
 
-.slider_highlights input[value="three"]:checked~.slider_highlights_wrapper {
-    transform: translateX(calc(0));
+.slider_highlights input[value="three"]:checked ~ .slider_highlights_wrapper {
+    transform: translateX(-50%);
 }
 
-.slider_highlights input[value="four"]:checked~.slider_highlights_wrapper {
-    transform: translateX(calc(-100% /4));
+.slider_highlights input[value="four"]:checked ~ .slider_highlights_wrapper {
+    transform: translateX(-75%);
 }
+
 
 /* Footer */
 
