@@ -288,11 +288,68 @@ main {
     color: rgba(61, 61, 61, 1);
     width: 1000px;
 }
-span{
+.info2 > span{
     font-family: 'Palanquin', sans-serif;
     font-weight: 700;
     font-style: bold;
     line-height: 120%;
     letter-spacing: 0%;
     color: rgba(61, 61, 61, 1);
+}
+.pro-tipps{
+    width: 1130px;
+}
+.pro-tipps-title{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: rgba(78, 164, 135, 1);
+    border-radius: 10px;
+    width: 195.92px;
+    height: 66px;
+    transform: rotate(-13.67deg);
+    top: -0px;
+    
+}
+.pro-tipps-title > p{
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: rgba(241, 201, 83, 1);
+    
+}
+.pro-tipps-title>img{
+    width: 43.75px;
+    height: 42.19px;
+    transform: rotate(8deg);
+    margin-right: 8px;
+    margin-left: 8px;
+}
+.pro-tipps-list{
+    width: 1083px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 47px;
+    margin-top: -20px;
+    background-color: rgba(78, 164, 135, 0.2);
+    border-radius: 30px;
+    padding: 26px 16px 24px 16px;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: rgba(61, 61, 61, 1);
+}
+.pro-tipps-list > ol > li > span{
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: rgba(78, 164, 135, 1);
 }
