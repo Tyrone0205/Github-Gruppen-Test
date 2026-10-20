@@ -1,4 +1,20 @@
 
+/* arima-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Arima';
+  font-style: normal;
+  src: url('./assets/fonts/arima-v7-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* palanquin-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Palanquin';
+  font-style: normal;
+  src: url('./assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 * {
     margin: 0px;
     box-sizing: border-box;
@@ -18,6 +34,13 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+h2 {
+    font-size: 52px;
+    font-family: 'Arima';
+    font-weight: 700;
+    color: rgba(78, 164, 135, 1);
 }
 
 /* Header */
@@ -146,13 +169,81 @@ nav > a {
 main {
     width: 100%;
     margin: 0 auto;
-    padding: 120px 120px 120px 160px;
+    padding: 120px 120px 160px 120px;
     gap: 120px;
     flex: 1;
 }
 
+.highlights {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 88px;
+    flex-direction: column;
+}
+
 .highlights-headline {
-    gap: 24px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.highlights-headline-text {
+    display: flex;
+    gap: 8px;
+}
+
+.highlights-headline > p {
+  text-align: center;
+  font-family: 'Palanquin';
+  font-weight: 500;
+}
+
+.slider_highlights {
+    overflow: hidden /*Wir verstecken die überlappenden bilder*/;
+    position: relative; /*Die Box für den Slider*/
+    width: 1200px;
+    height: 533px;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.slider_highlights input {
+    z-index: 2; /*Stappelreihenfolge um so größer die Zahl um so höhere ebene*/
+}
+
+.slider_highlights_wrapper {
+    z-index: 1;
+    position: absolute; /*Wir wollen den wrapper aus den dokumenten fluss rausnehmen*/
+    width: 400%; /*Wegen 4 Bilder*/
+    height: 100%;
+    display: flex; /*Damit die Bilder übereinander liegen*/
+    transition: all 1s ease-in-out;
+}
+
+.slider_highlights_element {
+    height: 100%;
+    width: calc(100% /4); /*Damit wir wieder 100% vom slider haben*/
+}
+
+.slider_highlights input[value="one"]:checked~.slider_highlights_wrapper {
+    transform: translateX(calc(100% /4));
+}
+
+.slider_highlights input[value="two"]:checked~.slider_highlights_wrapper {
+    transform: translateX(calc(100% /4));
+}
+
+.slider_highlights input[value="three"]:checked~.slider_highlights_wrapper {
+    transform: translateX(calc(0));
+}
+
+.slider_highlights input[value="four"]:checked~.slider_highlights_wrapper {
+    transform: translateX(calc(-100% /4));
 }
 
 /* Footer */
