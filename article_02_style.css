@@ -1,3 +1,7 @@
+
+
+
+
 *{
 
     margin: 0;
@@ -227,12 +231,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-
-
-   
-    
-    
-    
+     gap: 10px;
 
 }
 
@@ -247,13 +246,32 @@
 }
 
 
-.cta-share-arrow{
-    display: flex;
-    justify-content: flex-start;
-    width: 450px;
-    
-   
 
+.arrow-share-buttton-section{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 495px;
+    
+  
+
+}
+
+.cta-share-arrow{
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 167px;
+    padding-bottom: 80px;
+    padding-left: 40px;
+    
+
+}
+
+.cta-share-arrow img {
+    width: 85px;
 }
 
 
@@ -279,10 +297,10 @@
 .cta-share-button-section {
 
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-
+   
+    width: 160px;
 
 }
 
