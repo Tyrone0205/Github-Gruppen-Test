@@ -271,7 +271,7 @@ main {
     transform: perspective(250px) rotateY(-20deg) translateX(20px);
 
 }
-.info1{
+.info{
     font-family: 'Palanquin', sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -279,7 +279,7 @@ main {
     letter-spacing: 0%;
     color: rgba(61, 61, 61, 1);    
 }
-.info2{
+.info-list{
     font-family: 'Palanquin', sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -288,7 +288,7 @@ main {
     color: rgba(61, 61, 61, 1);
     width: 1000px;
 }
-.info2 > span{
+.info-list > span{
     font-family: 'Palanquin', sans-serif;
     font-weight: 700;
     font-style: bold;
