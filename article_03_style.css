@@ -7,7 +7,21 @@
 .header {
     display: flex;
     align-items: center;
+    gap: 72px;
     padding: 0 146px;
     background-color: rgba(78, 164, 135, 1);
     height: 128px;
-}Í
+    font-size: 24px;
+
+}
+
+.nav-bar {
+    display: flex;
+    gap: 32px;
+}
+
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+}
