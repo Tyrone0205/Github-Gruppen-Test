@@ -37,3 +37,8 @@ align-items: flex-start;
 
 
 }
+
+p. section {
+    padding: 32px;
+    gap: 32px;
+}
