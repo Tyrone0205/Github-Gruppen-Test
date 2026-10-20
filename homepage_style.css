@@ -1,20 +1,41 @@
+
 * {
     margin: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
-header {
-    display: flex;
-    align-items: center;
+/* Allgemeine Content-Begrenzung */
+
+.content-container {
+    position: relative;
     width: 100%;
-    gap: 100px;
-    padding: 0px 120px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+
+header {
+    width: 100%;
     height: 128px;
     background-color: rgb(78, 164, 135);
 }
 
-header > img {
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 0px 120px;
+}
+
+.header-content > img {
     height: 72px;
 }
 
@@ -31,30 +52,125 @@ nav > a {
     text-decoration: none;
 }
 
+/* Hero-Section */
+
+
+/* Hero-Section */
+
 .filler {
-    background-image: url('./assets/img/hero_web.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
+    width: 100%;
     height: 533px;
 }
 
+.filler > .content-container {
+    overflow: hidden; /* Schneidet überstehende Elemente ab */
+
+    background-image: url("./assets/img/Ballon_Picture.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.yellow-slider {
+    position: absolute; /* Positionierung relativ zum nächsten positionierten Vorfahren */
+    top: 0;
+    left: 0;
+
+    width: 2000px;
+    height: 100%;
+
+    display: flex; /* Ordnet die gelbe Fläche und die PNG nebeneinander an */
+    align-items: center;
+
+    /* Name | Dauer | langsamer Start/Ende | Endposition beibehalten */
+    animation: slideLeft 3s ease-in-out forwards;
+}
+
+/* ::before erzeugt die gelbe Fläche ohne zusätzliches HTML-Element */
+.yellow-slider::before {
+    content: "";
+
+    /* Füllt den übrigen Platz neben der PNG aus (1058px) */
+    flex: 1;
+
+    height: 100%;
+    background-color: #F1CD53;
+}
+
+.yellow-curve {
+    display: block;
+    width: 942px;
+    height: 533px;
+    flex-shrink: 0; /* Verhindert, dass Flexbox die PNG verkleinert */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 1360px;
+    width: 260px;
+
+    transform: translateY(-50%); /* Zentriert den Text vertikal zusammen mit top: 50% */
+
+    /* z-index bestimmt die Stapelreihenfolge überlappender Elemente.
+       Höhere Werte liegen vor niedrigeren Werten. */
+    z-index: 2;
+}
+
+.hero-content > h1 {
+    padding-bottom: 32px;
+}
+
+.cappadocia-icon {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+
+    left: 1735px;
+    bottom: 95px;
+
+    z-index: 3; /* Liegt vor dem Text (z-index: 2), sofern sie sich überlappen */
+}
+
+/* Definiert die Bewegung des gesamten Sliders von rechts nach links */
+@keyframes slideLeft {
+    from {
+        transform: translateX(0); /* Startposition */
+    }
+
+    to {
+        transform: translateX(-1200px); /* Verschiebt den Slider 1200px nach links */
+    }
+}
+
+
+/* Main */
+
 main {
+    width: 100%;
+    margin: 0 auto;
     padding: 120px 120px 120px 160px;
     gap: 120px;
+    flex: 1;
 }
 
 .highlights-headline {
     gap: 24px;
 }
 
+/* Footer */
+
 footer {
-    display: flex;
-    justify-content: space-between;
     width: 100%;
     height: 152px;
     background-color: rgb(78, 164, 135);
-    padding: 60px 120px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 120px;
 }
 
 .footer-information {
@@ -76,4 +192,12 @@ footer {
     gap: 16px;
 }
 
+/* Content-Begrenzung ab 1440px */
 
+@media screen and (min-width: 1440px) {
+    .content-container,
+    main {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
