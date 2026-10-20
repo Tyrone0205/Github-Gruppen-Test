@@ -90,3 +90,11 @@ main {
     align-items: center;
 
 }
+.content {
+    width: 1201px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 80px; */
+}
