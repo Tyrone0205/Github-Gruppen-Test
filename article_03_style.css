@@ -29,3 +29,11 @@
 .logo {
     height: 72px;
 }
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+align-items: flex-start;
+
+
+}
