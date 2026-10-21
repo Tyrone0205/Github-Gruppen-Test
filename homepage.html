@@ -181,21 +181,23 @@
             </div>
 
             <form class="contact-formular">
-                <div class="personal-data-questions">
-                    <div class="personal-data-questions-element">
-                        <label for="name">What’s your name?</label>
-                        <input type="text" name="name" id="name" required>
+                <div class="contact-formular-questions">
+                    <div class="personal-data-questions">
+                        <div class="personal-data-questions-element">
+                            <label for="name">What’s your name?</label>
+                            <input type="text" name="name" id="name" required>
+                        </div>
+
+                        <div class="personal-data-questions-element">
+                            <label for="email">What’s your email?</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
                     </div>
 
-                    <div class="personal-data-questions-element">
-                        <label for="email">What’s your email?</label>
-                        <input type="email" name="email" id="email" required>
+                    <div class="helping-questions">
+                        <label for="message">How can I help?</label>
+                        <textarea name="message" id="message" required></textarea>
                     </div>
-                </div>
-
-                <div class="helping-questions">
-                    <label for="message">How can I help?</label>
-                    <textarea name="message" id="message" required></textarea>
                 </div>
 
                 <div class="confirmation-section">
@@ -203,8 +205,11 @@
                         <input type="checkbox" name="privacy" id="privacy" required>
 
                         <label for="privacy">
-                            I've read the <span>privacy policy</span> and agree to the processing of my data as outlined.
+                            I've read the <button>privacy policy</button> and agree to the processing of my data as
+                            outlined.
                         </label>
+
+                         <p class="privacy-error">Please accept the privacy policy.</p>
                     </div>
 
                     <button type="submit">Send</button>
