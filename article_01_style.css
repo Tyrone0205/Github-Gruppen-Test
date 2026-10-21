@@ -20,7 +20,7 @@
 
 * {
     margin: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     /* font-family: 'Arima', sans-serif; */
 }
 
@@ -81,8 +81,32 @@ html {
     text-decoration: none;
     color: rgba(248, 245, 235, 1);
     font-family: 'Arima', sans-serif;
+    font-size: 24px;
 }
-
+.links-text{
+    text-align: center;
+}
+.links-underline{
+    width: 119.14px;
+    height: 13.32px;
+    border: 3px;
+    margin-top: -13px;
+    display: none;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 119.14px;
+    height: 29.11px;
+}
+.links:hover .links-underline{
+    display: block;
+}
+.links:active{
+    color: rgba(241, 201, 83, 1)
+}
 main {
     /* width: 1201px; */
     width: 100%;
@@ -404,6 +428,9 @@ main {
     gap: 10px;
     background-color: rgba(78, 164, 135, 1);
     color: rgba(241, 201, 83, 1);
+}
+.share-button:hover{
+
 }
 
 .share-button p {
