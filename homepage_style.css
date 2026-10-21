@@ -1,26 +1,31 @@
-
 /* arima-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Arima';
-  font-style: normal;
-  src: url('./assets/fonts/arima-v7-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Arima';
+    font-style: normal;
+    src: url('./assets/fonts/arima-v7-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* palanquin-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Palanquin';
-  font-style: normal;
-  src: url('./assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Palanquin';
+    font-style: normal;
+    src: url('./assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* palanquin-dark-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Palanquin Dark';
-  font-style: normal;
-  src: url('./assets/fonts/palanquin-dark-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Palanquin Dark';
+    font-style: normal;
+    src: url('./assets/fonts/palanquin-dark-v17-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 * {
@@ -59,6 +64,7 @@ h3 {
     line-height: 110%;
     padding-bottom: 8px;
 }
+
 /* Header */
 
 header {
@@ -74,7 +80,7 @@ header {
     padding: 0px 120px;
 }
 
-.header-content > img {
+.header-content>img {
     height: 72px;
 }
 
@@ -84,7 +90,7 @@ nav {
     align-items: center;
 }
 
-nav > a {
+nav>a {
     color: white;
     font-size: 24px;
     font-weight: 700;
@@ -98,8 +104,9 @@ nav > a {
     height: 533px;
 }
 
-.filler > .content-container {
-    overflow: hidden; /* Schneidet überstehende Elemente ab */
+.filler>.content-container {
+    overflow: hidden;
+    /* Schneidet überstehende Elemente ab */
 
     background-image: url("./assets/img/Ballon_Picture.jpg");
     background-size: cover;
@@ -108,14 +115,16 @@ nav > a {
 }
 
 .yellow-slider {
-    position: absolute; /* Positionierung relativ zum nächsten positionierten Vorfahren */
+    position: absolute;
+    /* Positionierung relativ zum nächsten positionierten Vorfahren */
     top: 0;
     left: 0;
 
     width: 2000px;
     height: 100%;
 
-    display: flex; /* Ordnet die gelbe Fläche und die PNG nebeneinander an */
+    display: flex;
+    /* Ordnet die gelbe Fläche und die PNG nebeneinander an */
     align-items: center;
 
     /* Name | Dauer | langsamer Start/Ende | Endposition beibehalten */
@@ -137,7 +146,8 @@ nav > a {
     display: block;
     width: 942px;
     height: 533px;
-    flex-shrink: 0; /* Verhindert, dass Flexbox die PNG verkleinert */
+    flex-shrink: 0;
+    /* Verhindert, dass Flexbox die PNG verkleinert */
 }
 
 .hero-content {
@@ -146,14 +156,15 @@ nav > a {
     left: 1360px;
     width: 260px;
 
-    transform: translateY(-50%); /* Zentriert den Text vertikal zusammen mit top: 50% */
+    transform: translateY(-50%);
+    /* Zentriert den Text vertikal zusammen mit top: 50% */
 
     /* z-index bestimmt die Stapelreihenfolge überlappender Elemente.
        Höhere Werte liegen vor niedrigeren Werten. */
     z-index: 2;
 }
 
-.hero-content > h1 {
+.hero-content>h1 {
     padding-bottom: 32px;
 }
 
@@ -165,17 +176,20 @@ nav > a {
     left: 1735px;
     bottom: 95px;
 
-    z-index: 3; /* Liegt vor dem Text (z-index: 2), sofern sie sich überlappen */
+    z-index: 3;
+    /* Liegt vor dem Text (z-index: 2), sofern sie sich überlappen */
 }
 
 /* Definiert die Bewegung des gesamten Sliders von rechts nach links */
 @keyframes slideLeft {
     from {
-        transform: translateX(0); /* Startposition */
+        transform: translateX(0);
+        /* Startposition */
     }
 
     to {
-        transform: translateX(-1200px); /* Verschiebt den Slider 1200px nach links */
+        transform: translateX(-1200px);
+        /* Verschiebt den Slider 1200px nach links */
     }
 }
 
@@ -205,7 +219,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .highlights-headline-text {
@@ -213,15 +227,18 @@ main {
     gap: 8px;
 }
 
-.highlights-headline > p {
-  text-align: center;
-  font-family: 'Palanquin';
-  font-weight: 500;
+.highlights-headline>p {
+    text-align: center;
+    font-family: 'Palanquin';
+    font-weight: 500;
 }
 
 .slider_highlights {
-    overflow: hidden /*Wir verstecken die überlappenden bilder*/;
-    position: relative; /*Die Box für den Slider*/
+    overflow: hidden
+        /*Wir verstecken die überlappenden bilder*/
+    ;
+    position: relative;
+    /*Die Box für den Slider*/
     width: 1200px;
     height: 533px;
     border-top-right-radius: 100px;
@@ -234,7 +251,8 @@ main {
 }
 
 .slider_highlights input {
-    z-index: 2; /*Stappelreihenfolge um so größer die Zahl um so höhere ebene*/
+    z-index: 2;
+    /*Stappelreihenfolge um so größer die Zahl um so höhere ebene*/
 }
 
 .slider_highlights_wrapper {
@@ -243,7 +261,8 @@ main {
     top: 0;
     left: 0;
 
-    width: 400%; /* Vier Bilder nebeneinander */
+    width: 400%;
+    /* Vier Bilder nebeneinander */
     height: 100%;
 
     display: flex;
@@ -252,48 +271,53 @@ main {
 
 .slider_highlights_element {
     position: relative;
-    width: 25%; /* Jedes Bild nimmt ein Viertel des Wrappers ein */
+    width: 25%;
+    /* Jedes Bild nimmt ein Viertel des Wrappers ein */
     height: 100%;
 
-    flex-shrink: 0; /* Verhindert das Verkleinern der Bilder */
-    object-fit: cover; /* Füllt den Slider ohne Bildverzerrung */
+    flex-shrink: 0;
+    /* Verhindert das Verkleinern der Bilder */
+    object-fit: cover;
+    /* Füllt den Slider ohne Bildverzerrung */
 }
 
-.slider_highlights_element > img {
+.slider_highlights_element>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .slider_highlights_text {
-    position: absolute; /* Positioniert den Text über dem Bild */
+    position: absolute;
+    /* Positioniert den Text über dem Bild */
     top: 53px;
     left: 44px;
     padding: 16px 24px;
     gap: 8px;
     background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(8px);
-    z-index: 2; /* Text liegt über dem Bild */
+    z-index: 2;
+    /* Text liegt über dem Bild */
 }
 
-.slider_highlights_text > p {
+.slider_highlights_text>p {
     font-size: 28px;
     font-family: 'Palanquin';
     font-weight: 400;
     line-height: 1.1;
     color: white;
-} 
+}
 
 
-.slider_highlights input[value="one"]:checked ~ .slider_highlights_wrapper {
+.slider_highlights input[value="one"]:checked~.slider_highlights_wrapper {
     transform: translateX(0);
 }
 
-.slider_highlights input[value="two"]:checked ~ .slider_highlights_wrapper {
+.slider_highlights input[value="two"]:checked~.slider_highlights_wrapper {
     transform: translateX(-25%);
 }
 
-.slider_highlights input[value="three"]:checked ~ .slider_highlights_wrapper {
+.slider_highlights input[value="three"]:checked~.slider_highlights_wrapper {
     transform: translateX(-50%);
 }
 
@@ -315,7 +339,7 @@ main {
     background-color: rgba(241, 201, 83, 1);
 }
 
-.slider_highlights input[value="four"]:checked ~ .slider_highlights_wrapper {
+.slider_highlights input[value="four"]:checked~.slider_highlights_wrapper {
     transform: translateX(-75%);
 }
 
@@ -347,7 +371,7 @@ main {
     background-color: rgba(241, 201, 83, 1);
 }
 
-.faQ-questions-element > summary {
+.faQ-questions-element>summary {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -355,22 +379,23 @@ main {
     list-style: none;
 }
 
-.faQ-questions-element > summary::-webkit-details-marker {
-    display: none; /* Entfernt den Standardpfeil */
+.faQ-questions-element>summary::-webkit-details-marker {
+    display: none;
+    /* Entfernt den Standardpfeil */
 }
 
-.faQ-questions-element summary > span {
+.faQ-questions-element summary>span {
     font-size: 24px;
     font-family: 'Palanquin';
     font-weight: 700;
 }
 
-.faQ-questions-element summary > img {
+.faQ-questions-element summary>img {
     transition: transform 0.3s ease;
 }
 
 /* Dreht den Pfeil, sobald die Antwort geöffnet ist */
-.faQ-questions-element[open] summary > img {
+.faQ-questions-element[open] summary>img {
     transform: rotate(180deg);
 }
 
@@ -381,6 +406,56 @@ main {
     background-color: white;
     font-family: 'Palanquin';
 }
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    width: 100%;
+    padding: 0px 50px;
+}
+
+.contact-headline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.contact-headline-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-headline > p {
+    font-size: 24px;
+    font-style: 'Palanquin';
+    text-align: center;
+}
+
+.contact-formular {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+}
+
+.personal-data-questions {
+    display: flex;
+    justify-content: space-between;
+    gap: 17px;
+}
+
+.personal-data-questions-element {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 17px;
+}
+
+
 
 
 
@@ -421,6 +496,7 @@ footer {
 /* Content-Begrenzung ab 1440px */
 
 @media screen and (min-width: 1440px) {
+
     .content-container,
     main {
         max-width: 1440px;
