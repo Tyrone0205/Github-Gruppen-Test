@@ -580,6 +580,18 @@ a {
     margin-top: -10px;
 }
 
+@media screen and (max-width:1439px) {
+    .nav-links{
+        display: none;
+    }
+    .container{
+        justify-content: center;
+    }
+    .nav{
+        justify-content: center;
+    }
+}
+
 @media screen and (min-width:1440px) and (max-width:1919px) {
     .container {
         width: 1201px;
