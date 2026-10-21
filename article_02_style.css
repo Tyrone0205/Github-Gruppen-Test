@@ -27,6 +27,40 @@
 }    
 
 
+/* Header */
+
+header {
+    width: 100%;
+    height: 128px;
+    background-color: rgb(78, 164, 135);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 0px 120px;
+     height: 100%;
+}
+
+.header-content > img {
+    height: 72px;
+}
+
+nav {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+nav > a {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
 
 .main {
 
@@ -426,9 +460,6 @@
     gap: 8px
 
 
-
-
-
 }
 
 .pro-tipp-tag img{
@@ -446,7 +477,7 @@
     justify-content: center;
     align-items: center;
 
-    padding: 120px;
+    padding: 0px 120px 120px 120px;
 
     font-family: 'Palaquin';
     font-weight: 400;
@@ -472,7 +503,6 @@
     align-items: center;
 
    
-
    
 }
 
@@ -483,7 +513,6 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 120%;
-
 
 
 }
@@ -497,10 +526,57 @@
     transform: rotate(14);
 
     padding-top: -6px;
+ 
+    
+    
+}
 
-   
-    
-    
+
+footer {
+
+    width: 100%;
+    height: 152px;
+    background-color: rgb(78, 164, 135);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 120px;
+    height: 100%;
+}
+
+.footer-information {
+    display: flex;
+    align-items: center;
+    gap: 72px;
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+}
+
+.copyright-information {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-family:'Palanquin';
+    font-size: 16px;
+    font-weight: 400;
+
+
+}
+
+.copyright-information p {
+
+    font-family:'Palanquin';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.footer-navbar {
+    gap: 16px;
 }
 
 
