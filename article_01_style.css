@@ -20,7 +20,7 @@
 
 * {
     margin: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box; 
     /* font-family: 'Arima', sans-serif; */
 }
 
@@ -104,9 +104,12 @@ html {
 .links:hover .links-underline{
     display: block;
 }
-.links:active{
+.links:checked .links-text{
     color: rgba(241, 201, 83, 1)
 }
+/* .links:active{
+    color: rgba(241, 201, 83, 1)
+} */
 main {
     /* width: 1201px; */
     width: 100%;
@@ -149,9 +152,21 @@ main {
     gap: 8px;
 }
 
-.article-img {
+.article-img-calendar {
     width: 16px;
-    height: 16px;
+    height: 18px;
+}
+.article-img-reading {
+    width: 20px;
+    height: 7px;
+}
+.article-img-views {
+    width: 20px;
+    height: 14px;
+}
+.article-img-shared {
+    width: 16px;
+    height: 18px;
 }
 
 .definition-text .header {
