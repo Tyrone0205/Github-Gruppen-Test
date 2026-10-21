@@ -60,7 +60,7 @@
 .info {
     gap: 20px;
 }
-.textsection p {
+.textsection p {
     font-size: 24px;
     color: #3D3D3D;
     gap: 50px;
@@ -68,4 +68,14 @@
 
 .visitenkarte { 
     justify-content: space-between;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-item img { 
+    height: 18px;
 }
