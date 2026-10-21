@@ -183,6 +183,8 @@ nav > a {
 /* Main */
 
 main {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin: 0 auto;
     padding: 120px 120px 160px 120px;
@@ -316,6 +318,70 @@ main {
 .slider_highlights input[value="four"]:checked ~ .slider_highlights_wrapper {
     transform: translateX(-75%);
 }
+
+
+.faQ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    flex-direction: column;
+}
+
+.faQ-headline {
+    display: flex;
+    gap: 8px;
+}
+
+.faQ-questions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 32px;
+}
+
+
+.faQ-questions-element {
+    border-radius: 12px;
+    padding: 14px 16px;
+    background-color: rgba(241, 201, 83, 1);
+}
+
+.faQ-questions-element > summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faQ-questions-element > summary::-webkit-details-marker {
+    display: none; /* Entfernt den Standardpfeil */
+}
+
+.faQ-questions-element summary > span {
+    font-size: 24px;
+    font-family: 'Palanquin';
+    font-weight: 700;
+}
+
+.faQ-questions-element summary > img {
+    transition: transform 0.3s ease;
+}
+
+/* Dreht den Pfeil, sobald die Antwort geöffnet ist */
+.faQ-questions-element[open] summary > img {
+    transform: rotate(180deg);
+}
+
+.faQ-answer {
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: white;
+    font-family: 'Palanquin';
+}
+
 
 
 /* Footer */
