@@ -39,6 +39,7 @@
 #contact-id {
     scroll-margin-top: 128px;
 }
+
 /* Allgemeine Content-Begrenzung */
 
 .content-container {
@@ -97,18 +98,64 @@ header {
     height: 72px;
 }
 
+
 nav {
     display: flex;
     gap: 100px;
     align-items: center;
 }
 
-nav>a {
+.header-content nav > a {
+    position: relative;
     color: white;
     font-size: 24px;
     font-family: 'Arima';
     font-weight: 700;
     text-decoration: none;
+}
+
+/* Nur die Unterstreichungen im Header ausblenden */
+.header-content nav > a > img {
+    display: none;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+/* Unterstreichung beim Hover anzeigen */
+.header-content nav > a:hover > img {
+    display: block;
+}
+
+/* Individuelle Größen der Unterstreichungen */
+.underline-highlights {
+    width: 120px;
+    height: 13px;
+}
+
+.underline-faq {
+    top: 70%;
+    width: 54px;
+    height: 5px;
+}
+
+.underline-contact {
+    width: 90px;
+    height: 7px;
+}
+
+/* Aktuell ausgewählten Navigationspunkt gelb färben */
+body:has(#highlights-id:target) nav>a[href="#highlights-id"],
+body:has(#faQ-id:target) nav>a[href="#faQ-id"],
+body:has(#contact-id:target) nav>a[href="#contact-id"] {
+    color: #F1CD53;
+}
+
+/* Unterstreichung beim Hover anzeigen */
+nav>a:hover>img {
+    display: block;
 }
 
 /* Hero-Section */
@@ -201,6 +248,7 @@ nav>a {
 
     z-index: 3;
     /* Liegt vor dem Text (z-index: 2), sofern sie sich überlappen */
+    animation: iconSpin 10s linear infinite;
 }
 
 /* Definiert die Bewegung des gesamten Sliders von rechts nach links */
@@ -213,6 +261,17 @@ nav>a {
     to {
         transform: translateX(-1200px);
         /* Verschiebt den Slider 1200px nach links */
+    }
+}
+
+/* Dreht das Icon dauerhaft um 360 Grad */
+@keyframes iconSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }
 
@@ -569,6 +628,11 @@ main {
     visibility: visible;
 }
 
+/*Zeigt sie an, da das Feld als required zählt*/
+.confirmation-checkbox-section:has(input:invalid) .privacy-error {
+    visibility: visible;
+}
+
 
 .confirmation-checkbox-section>input {
     width: 16px;
@@ -647,6 +711,13 @@ footer {
     padding: 0px 120px;
 }
 
+.footer-information p {
+    font-family: 'Palanquin';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
 .footer-information {
     display: flex;
     align-items: center;
@@ -663,8 +734,18 @@ footer {
 }
 
 .footer-navbar {
+    display: flex;
+    align-items: center;
     gap: 16px;
 }
+
+.footer-navbar > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 /* Content-Begrenzung ab 1440px */
 
