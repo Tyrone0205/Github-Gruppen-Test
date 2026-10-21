@@ -33,8 +33,26 @@
 .hero-section {
     display: flex;
     justify-content: space-between;
-align-items: flex-start;
+    align-items: flex-start;
+    padding: 64px 128 px;
 
 
 }
 
+.bodytext {
+    color: #4EA487;
+    font-size: 64px;
+}
+
+.hero-text h1 {
+    color: #F1C953;
+    font-size: 64px;
+}
+
+.teaser {
+    font-size: 28;
+}
+
+.info {
+    gap: 20px;
+}
