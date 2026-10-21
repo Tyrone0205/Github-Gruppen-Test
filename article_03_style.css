@@ -36,14 +36,14 @@
     align-items: flex-start;
     padding: 64px 128 px;
     gap: 50px;
-    padding: 80px 80px;
+    padding: 80px 140px;
 
 
 }
 
-.bodytext {
+.eyebrow-text {
     color: #4EA487;
-    font-size: 64px;
+    font-size: 40px;
    
 }
 
@@ -52,16 +52,18 @@
     font-size: 64px;
 }
 
-.teaser {
-    font-size: 28;
+.bodytext {
+    font-size: 28px;
+    color: #54370D;
 }
 
 .info {
     gap: 20px;
 }
-.undertext p {
+.textsection p {
     font-size: 24px;
     color: #3D3D3D;
+    gap: 50px;
 }
 
 .visitenkarte { 
