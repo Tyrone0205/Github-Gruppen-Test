@@ -284,6 +284,9 @@ main {
     width: 200px;
     height: 300px;
 
+    border-radius: 20px;
+    margin-left: -40px; 
+
     background-color: blueviolet;
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.20);
 
@@ -298,6 +301,7 @@ main {
     height: 300px;
     width: 200px;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 .slider-element:hover {
