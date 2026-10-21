@@ -36,6 +36,7 @@
     align-items: flex-start;
     padding: 64px 128 px;
     gap: 50px;
+    padding: 80px 80px;
 
 
 }
@@ -43,6 +44,7 @@
 .bodytext {
     color: #4EA487;
     font-size: 64px;
+   
 }
 
 .hero-text h1 {
@@ -60,4 +62,8 @@
 .undertext p {
     font-size: 24px;
     color: #3D3D3D;
+}
+
+.visitenkarte { 
+    justify-content: space-between;
 }
