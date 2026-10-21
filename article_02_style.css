@@ -1,14 +1,37 @@
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Arima';
+    font-style: normal;
+    src: url('./assets/fonts/arima-v7-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Palanquin';
+    font-style: normal;
+    src: url('.assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 
 
 *{
 
-    margin: 0;
+    margin: 0 ;
     box-sizing: border-box;
     scroll-behavior: smooth;
 
+
 }
+
+
+.body{
+    height: 100dvh;
+}
+
 
 
 .main {
@@ -48,6 +71,7 @@
 
     font-size: 30px;
     color: rgba(84, 55, 13, 1);
+    gap: 8px;
 
 }
 
@@ -231,7 +255,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-     gap: 10px;
+
+    margin-bottom: 160px;
 
 }
 
@@ -265,13 +290,17 @@
     justify-content: flex-start;
     width: 167px;
     padding-bottom: 80px;
-    padding-left: 40px;
+    padding-left: 15px;
+    
     
 
 }
 
 .cta-share-arrow img {
-    width: 85px;
+    width: 95px;
+  
+    
+    
 }
 
 
@@ -318,3 +347,54 @@
     
 }
 
+
+.pro-tipp-tag{
+
+    width:196px;
+    height:66px;
+    background-color: rgba(78, 164, 135, 1);
+    
+
+
+
+}
+
+.pro-tipp{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 120px;
+
+}
+
+
+
+.pro-tipp-box{
+
+    width: 1083px;
+    height: 195px;
+    background-color: rgba(78, 164, 135, 0.2);
+    border-radius:30px;
+    padding:25px 15px 25px 15px;
+
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+
+   
+}
+
+.pro-tipp-box p{
+
+    font-size: 24px;
+
+
+}
+
+
+
+@media screen {
+    
+}
