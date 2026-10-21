@@ -105,7 +105,7 @@ nav {
     align-items: center;
 }
 
-.header-content nav > a {
+.header-content nav>a {
     position: relative;
     color: white;
     font-size: 24px;
@@ -115,7 +115,7 @@ nav {
 }
 
 /* Nur die Unterstreichungen im Header ausblenden */
-.header-content nav > a > img {
+.header-content nav>a>img {
     display: none;
     position: absolute;
     top: 62%;
@@ -125,7 +125,7 @@ nav {
 }
 
 /* Unterstreichung beim Hover anzeigen */
-.header-content nav > a:hover > img {
+.header-content nav>a:hover>img {
     display: block;
 }
 
@@ -364,6 +364,13 @@ main {
     /* Verhindert das Verkleinern der Bilder */
     object-fit: cover;
     /* Füllt den Slider ohne Bildverzerrung */
+    text-decoration: none;
+    /* Entfernt die Link-Unterstreichung */
+    color: inherit;
+    /* Verhindert die standardmäßige Linkfarbe */
+    cursor: pointer;
+    /* Zeigt beim Hover den Mauszeiger als Hand */
+
 }
 
 .slider_highlights_element>img {
@@ -739,7 +746,7 @@ footer {
     gap: 16px;
 }
 
-.footer-navbar > a {
+.footer-navbar>a {
     display: flex;
     align-items: center;
     justify-content: center;
