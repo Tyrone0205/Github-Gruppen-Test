@@ -12,7 +12,7 @@
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Palanquin';
     font-style: normal;
-    src: url('.assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2');
+    src: url('./assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -24,13 +24,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 
-
-}
-
-
-.body{
-    height: 100dvh;
-}
+}    
 
 
 
@@ -49,13 +43,17 @@
     gap: 16px;
     height: 210px;
     width: 900px;
-    gap:8px;
+    
 
 }
 
 .main-text h2{
 
     font-size: 40px;
+    font-weight: 600;
+    line-height: 120%;
+    padding-bottom: 8px;
+    font-family: 'Palanquin';
     color: rgba(78, 164, 135, 1);
    
 }
@@ -63,15 +61,26 @@
 .main-text h1 {
 
     font-size: 64px;
+    font-family: 'Arima';
+    font-weight: 700;
+    line-height: 120%;
     color: rgba(241, 201, 83, 1);
+
+    padding-bottom: 8px;
+
+    
 
 }
 
 .main-text p{
 
-    font-size: 30px;
+    font-weight: 400;
+    font-family:'Palanquin';
+    line-height: 110%;
+    font-size: 28px;
     color: rgba(84, 55, 13, 1);
-    gap: 8px;
+
+    
 
 }
 
@@ -79,14 +88,14 @@
 
     display: flex;
     flex-direction: row;
-    align-items: center;
-    padding: 30px 0px 30px 0px;
+    align-items: flex-start;
     font-size: 16px;
     gap:32px;
     height: 19px;
 
-    
-   
+
+    padding-top: 50px;
+
 }
 
 
@@ -94,7 +103,10 @@
 .main-text-infos p{
 
     font-size: 16px;
-
+    font-weight: 400;
+    line-height: 120%;
+    font-family: 'Palanquin';
+    color: rgba(84, 55, 13, 1);
 
 }
 
@@ -123,6 +135,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap:6px;
    
 
@@ -188,21 +201,45 @@
 
 .table-profilename{
 
-    font-family: Arial, Helvetica, sans-serif;
+
+    font-family:'Arima';
     font-size: 18px;
+    font-weight: 700;
+    line-height: 120%;
+    color: rgba(84, 55, 13, 1);
+}
+
+.table-author{
+
+    font-family: 'Arima';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: rgba(84, 55, 13, 1);
+
+}
+
+.table-text{
+
+    font-family: 'Palanquin';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color:rgba(84, 55, 13, 1)
+
 }
 
 
 
 .main-bottom-text{
-    
-    display: flex;
-    flex-direction: row;
 
+    font-family: 'Palanquin';
     font-size: 24px;
+    font-weight: 400;
+    line-height: 120%;
     color: rgba(61, 61, 61, 1); 
+    padding: 0px 120px 90px 120px;
 
-     padding: 0px 120px 90px 120px;
 
 }
 
@@ -233,8 +270,12 @@
     flex-direction: column;
     gap: 32px;
 
-    padding:140px 120px 140px 120px;
+    padding:120px;
+    
+    font-family: 'Palanquin';
+    font-weight: 400;
     font-size: 24px;
+    line-height: 120%;
     color: rgba(61, 61, 61, 1);
     font-weight: 400;
     
@@ -243,8 +284,7 @@
 .info-text-list{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-
+    
 }
 
 
@@ -266,7 +306,11 @@
     width:495px;
     text-align: center;
     font-size: 24px;
+    font-family: 'Arima';
+    font-weight: 500;
+    line-height: 120%;
     color: rgba(84, 55, 13, 1);
+
     
 }
 
@@ -343,7 +387,12 @@
 .cta-share-button p{
 
     font-size: 24px;
+    font-family: 'Arima';
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 5%;
     color: rgba(241, 201, 83, 1);
+
     
 }
 
@@ -353,8 +402,39 @@
     width:196px;
     height:66px;
     background-color: rgba(78, 164, 135, 1);
-    
+    border-radius: 10px;
 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    top: 15px;
+    transform: rotate(-13deg);
+
+}
+
+
+.pro-tipp-tag p{
+
+    font-family: 'Palanquin';
+    font-weight: 700;
+    line-height: 120%;
+    font-size: 28px;
+    color: rgba(241, 201, 83, 1);
+    gap: 8px
+
+
+
+
+
+}
+
+.pro-tipp-tag img{
+
+    height: 50px;
+    width: 50px;
 
 
 }
@@ -362,10 +442,18 @@
 .pro-tipp{
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    margin-bottom: 120px;
+    padding: 120px;
+
+    font-family: 'Palaquin';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+
+
 
 }
 
@@ -384,14 +472,39 @@
     align-items: center;
 
    
+
+   
 }
 
-.pro-tipp-box p{
+.pro-tipp-box li {
 
     font-size: 24px;
+    font-family: 'Palanquin';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+
 
 
 }
+
+
+.pro-tipp-tag-container{
+    display: flex;
+    justify-content: flex-start;
+    width: 1200px;
+
+    transform: rotate(14);
+
+    padding-top: -6px;
+
+   
+    
+    
+}
+
+
+
 
 
 
