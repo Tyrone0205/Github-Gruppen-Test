@@ -580,6 +580,25 @@ a {
     margin-top: -10px;
 }
 
+@media screen and (min-width:1440px) and (max-width:1919px) {
+    .container {
+        width: 1201px;
+    }
+
+    .content {
+        width: 1201px;
+    }
+
+    .definition {
+
+        width: 1200px;
+    }
+
+    .footer-container {
+        width: 1200px;
+    }
+}
+
 @media screen and (min-width:1920px) {
     .container {
         width: 1440px;
