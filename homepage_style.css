@@ -1115,4 +1115,51 @@ footer {
         scroll-margin-top: 70px;
     }
 
+    /* Hero / Yellow-Slider */
+
+    .filler {
+        height: 515px;
+    }
+
+    .filler>.content-container {
+        background-position: 63% center;
+    }
+
+    .yellow-slider {
+        animation: none;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .yellow-slider::before {
+        display: none;
+    }
+
+    .yellow-curve {
+        display: none;
+    }
+
+    .yellow-curve-mobile {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: min(222px, 59.2vw);
+        height: auto;
+    }
+
+    .hero-content {
+        display: none;
+    }
+
+    .cappadocia-icon {
+        width: min(132px, 35.2vw);
+        height: auto;
+        left: clamp(55px, 22vw, 82px);
+        top: 111px;
+        bottom: auto;
+    }
+
 }
