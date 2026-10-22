@@ -12,14 +12,20 @@ main {
 }
 
 .header {
+    background-color: rgba(78, 164, 135, 1);
+    
+
+}
+
+.inline {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 146px;
     display: flex;
     align-items: center;
-    gap: 72px;
-    padding: 0 146px;
-    background-color: rgba(78, 164, 135, 1);
     height: 128px;
     font-size: 24px;
-
+    gap: 102px;
 }
 
 .nav-bar {
@@ -265,3 +271,17 @@ main {
     font-size: 16px;
 }
 
+.copyright {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.socials {
+    display: flex;
+    gap: 16px;
+}
+
+.socials img {
+    height: 32px;
+}
