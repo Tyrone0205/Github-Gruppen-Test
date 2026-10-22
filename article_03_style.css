@@ -114,6 +114,19 @@ main {
     
 }
 
-.info-item img { 
+.info-item img {
    height: 18px;
+}
+
+.grafik-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(84, 55, 13, 1);
+    padding-top: 88px;
+}
+
+.grafik-section img {
+    width: 640px;
+    max-width: 100%;
 }
