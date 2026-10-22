@@ -137,3 +137,9 @@ main {
 padding-top: 50px;
 }
 
+
+.statistics-section {
+    display: flex;
+    justify-content: column;
+    gap: 50px
+}
