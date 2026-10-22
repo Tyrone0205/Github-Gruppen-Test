@@ -1090,4 +1090,29 @@ footer {
         height: auto;
     }
 
+    /*Header - Ergänzung*/
+    body {
+        padding-top: 70px;
+        padding-bottom: 88px;
+    }
+
+    header {
+        height: 70px;
+    }
+
+    .header-content>img {
+        width: 56px;
+        height: 56px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    #highlights-id,
+    #faQ-id,
+    #contact-id {
+        scroll-margin-top: 70px;
+    }
+
 }
