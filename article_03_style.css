@@ -163,6 +163,7 @@ main {
 }
 
 .two-grafik img {
+    margin-top: auto;
    width: 519px;
     height: 471px;
     max-width: 100%;
@@ -175,4 +176,10 @@ main {
 .two-grafik h3 {
     font-size: 32px;
     color: rgba(84, 55, 13, 1);
+
+}
+
+.two-grafik p {
+    font-size: 24px;
+    justify-content: space-between;
 }
