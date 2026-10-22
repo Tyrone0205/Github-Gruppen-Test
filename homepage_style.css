@@ -1206,4 +1206,28 @@ footer {
         margin-left: 8px;
     }
 
+    /* Contact - Ergänzung */
+
+    .contact {
+        gap: 32px;
+    }
+
+    .personal-data-questions {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .contact-formular-questions {
+        gap: 32px;
+    }
+
+    .personal-data-questions-element>label,
+    .helping-questions>label {
+        font-size: clamp(16px, 4.8vw, 20px);
+    }
+
+    .confirmation-section {
+        gap: 24px;
+    }
+
 }
