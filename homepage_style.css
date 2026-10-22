@@ -176,6 +176,9 @@ nav>a:hover>img {
 }
 
 .yellow-slider {
+    --slide-distance: -1200px;
+    --slide-scale: 1;
+
     position: absolute;
     /* Positionierung relativ zum nächsten positionierten Vorfahren */
     top: 0;
@@ -201,6 +204,10 @@ nav>a:hover>img {
 
     height: 100%;
     background-color: #F1CD53;
+}
+
+.yellow-curve-mobile {
+    display: none;
 }
 
 .yellow-curve {
@@ -254,12 +261,12 @@ nav>a:hover>img {
 /* Definiert die Bewegung des gesamten Sliders von rechts nach links */
 @keyframes slideLeft {
     from {
-        transform: translateX(0);
+        transform: translateX(0) scale(var(--slide-scale));
         /* Startposition */
     }
 
     to {
-        transform: translateX(-1200px);
+        transform: translateX(var(--slide-distance)) scale(var(--slide-scale));
         /* Verschiebt den Slider 1200px nach links */
     }
 }
@@ -752,7 +759,11 @@ footer {
     justify-content: center;
 }
 
+/* Mobile-Navigation standardmäßig ausblenden */
 
+.mobile-bottom-nav {
+    display: none;
+}
 
 /* Content-Begrenzung ab 1440px */
 
