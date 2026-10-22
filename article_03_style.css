@@ -75,7 +75,7 @@ main {
 .textsection p {
     font-size: 24px;
     color: rgba(61, 61, 61, 1);
-    gap: 50px;
+    padding-top: 30px;
 }
 
 .visitenkarte { 
@@ -124,9 +124,11 @@ main {
     align-items: center;
     color: rgba(84, 55, 13, 1);
     padding-top: 88px;
+    gap: 24px;
 }
 
 .grafik-section img {
     width: 640px;
     max-width: 100%;
+    border-radius: 53px;
 }
