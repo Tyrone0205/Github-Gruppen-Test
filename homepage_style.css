@@ -919,5 +919,16 @@ footer {
         line-height: 1.4;
     }
 
+    
+    /* Contact */
+
+    .contact {
+        padding: 0 20px;
+    }
+
+    .contact-headline>p {
+        font-size: clamp(14px, 1.5vw, 18px);
+        line-height: 1.3;
+    }
 
 }
