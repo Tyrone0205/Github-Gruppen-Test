@@ -806,4 +806,45 @@ footer {
     .header-content nav>a {
         font-size: clamp(18px, 2vw, 24px);
     }
+
+    /* Hero / Yellow-Slider */
+
+    .filler {
+        --hero-scale: calc(100vw / 1220px);
+        height: calc(533px * var(--hero-scale));
+    }
+
+    .yellow-slider {
+        --slide-scale: var(--hero-scale);
+        --slide-distance: calc(-1295px * var(--slide-scale));
+
+        height: 533px;
+        transform-origin: top left;
+    }
+
+    .yellow-curve {
+        width: 942px;
+        height: 533px;
+    }
+
+    .hero-content {
+        left: 1360px;
+        width: 345px;
+    }
+
+    .hero-content>h1 {
+        font-size: 52px;
+        padding-bottom: 24px;
+    }
+
+    .hero-content>p {
+        font-size: 26px;
+    }
+
+    .cappadocia-icon {
+        left: 1735px;
+        width: 150px;
+        height: 150px;
+        bottom: 95px;
+    }
 }
