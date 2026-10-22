@@ -982,4 +982,22 @@ footer {
         padding: 0 16px;
     }
 
+    /* Highlights */
+
+    .highlights {
+        gap: 32px;
+    }
+
+    .highlights-headline {
+        gap: 0;
+    }
+
+    .highlights-headline h2 {
+        font-size: 40px;
+    }
+
+    .highlights-headline>p {
+        display: none;
+    }
+
 }
