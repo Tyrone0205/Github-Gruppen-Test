@@ -790,4 +790,20 @@ footer {
     h2 {
         font-size: clamp(28px, 3.5vw, 42px);
     }
+
+    
+    /* Header */
+
+    .header-content {
+        gap: clamp(24px, 5vw, 64px);
+        padding: 0 clamp(24px, 5vw, 64px);
+    }
+
+    nav {
+        gap: clamp(24px, 5vw, 64px);
+    }
+
+    .header-content nav>a {
+        font-size: clamp(18px, 2vw, 24px);
+    }
 }
