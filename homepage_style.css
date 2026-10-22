@@ -907,4 +907,17 @@ footer {
     .slider_highlights input[type="radio"]:checked {
         width: 30px;
     }
+
+    /* FAQ */
+
+    .faQ-questions-element summary>span {
+        font-size: clamp(14px, 1.6vw, 20px);
+    }
+
+    .faQ-answer>p {
+        font-size: clamp(12px, 1.4vw, 16px);
+        line-height: 1.4;
+    }
+
+
 }
