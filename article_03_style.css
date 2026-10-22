@@ -80,6 +80,9 @@ main {
 .info {
     display: flex;
     gap: 32px;
+    margin-top: 40px;
+    font-size: 16px;
+    padding-bottom: 48px;
 }
 
 .textsection p {
@@ -120,12 +123,13 @@ main {
 .info-item {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 6px;
 
 }
 
 .info-item img {
-    height: 18px;
+    padding: -10px;
+    
 }
 
 .grafik-section {
