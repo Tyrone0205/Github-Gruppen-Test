@@ -1,8 +1,43 @@
+/* arima-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Arima';
+    font-style: normal;
+    src: url('./assets/fonts/arima-v7-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* palanquin-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Palanquin';
+    font-style: normal;
+    src: url('./assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* palanquin-dark-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Palanquin Dark';
+    font-style: normal;
+    src: url('./assets/fonts/palanquin-dark-v17-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 * {
     margin: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
+}
+
+#highlights-id,
+#faQ-id,
+#contact-id {
+    scroll-margin-top: 128px;
 }
 
 /* Allgemeine Content-Begrenzung */
@@ -18,11 +53,35 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-top: 128px;
+}
+
+h2 {
+    font-size: 52px;
+    font-family: 'Arima';
+    font-weight: 700;
+    color: rgba(78, 164, 135, 1);
+}
+
+h3 {
+    font-size: 48px;
+    font-family: 'Palanquin Dark';
+    font-weight: 600;
+    color: white;
+    line-height: 110%;
+    padding-bottom: 8px;
 }
 
 /* Header */
 
 header {
+    position: fixed;
+    /* Header aus dem Dokumentenfluss nehmen */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* Header bleibt über den anderen Elementen */
+
     width: 100%;
     height: 128px;
     background-color: rgb(78, 164, 135);
@@ -35,9 +94,10 @@ header {
     padding: 0px 120px;
 }
 
-.header-content > img {
+.header-content>img {
     height: 72px;
 }
+
 
 nav {
     display: flex;
@@ -45,11 +105,57 @@ nav {
     align-items: center;
 }
 
-nav > a {
+.header-content nav>a {
+    position: relative;
     color: white;
     font-size: 24px;
+    font-family: 'Arima';
     font-weight: 700;
     text-decoration: none;
+}
+
+/* Nur die Unterstreichungen im Header ausblenden */
+.header-content nav>a>img {
+    display: none;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+/* Unterstreichung beim Hover anzeigen */
+.header-content nav>a:hover>img {
+    display: block;
+}
+
+/* Individuelle Größen der Unterstreichungen */
+.underline-highlights {
+    width: 120px;
+    height: 13px;
+}
+
+.underline-faq {
+    top: 70%;
+    width: 54px;
+    height: 5px;
+}
+
+.underline-contact {
+    width: 90px;
+    height: 7px;
+}
+
+/* Aktuell ausgewählten Navigationspunkt gelb färben */
+body:has(#highlights-id:target) nav>a[href="#highlights-id"],
+body:has(#faQ-id:target) nav>a[href="#faQ-id"],
+body:has(#contact-id:target) nav>a[href="#contact-id"] {
+    color: #F1CD53;
+}
+
+/* Unterstreichung beim Hover anzeigen */
+nav>a:hover>img {
+    display: block;
 }
 
 /* Hero-Section */
@@ -59,8 +165,9 @@ nav > a {
     height: 533px;
 }
 
-.filler > .content-container {
-    overflow: hidden; /* Schneidet überstehende Elemente ab */
+.filler>.content-container {
+    overflow: hidden;
+    /* Schneidet überstehende Elemente ab */
 
     background-image: url("./assets/img/Ballon_Picture.jpg");
     background-size: cover;
@@ -69,14 +176,16 @@ nav > a {
 }
 
 .yellow-slider {
-    position: absolute; /* Positionierung relativ zum nächsten positionierten Vorfahren */
+    position: absolute;
+    /* Positionierung relativ zum nächsten positionierten Vorfahren */
     top: 0;
     left: 0;
 
     width: 2000px;
     height: 100%;
 
-    display: flex; /* Ordnet die gelbe Fläche und die PNG nebeneinander an */
+    display: flex;
+    /* Ordnet die gelbe Fläche und die PNG nebeneinander an */
     align-items: center;
 
     /* Name | Dauer | langsamer Start/Ende | Endposition beibehalten */
@@ -98,24 +207,35 @@ nav > a {
     display: block;
     width: 942px;
     height: 533px;
-    flex-shrink: 0; /* Verhindert, dass Flexbox die PNG verkleinert */
+    flex-shrink: 0;
+    /* Verhindert, dass Flexbox die PNG verkleinert */
 }
 
 .hero-content {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 1360px;
-    width: 260px;
+    width: 345px;
 
-    transform: translateY(-50%); /* Zentriert den Text vertikal zusammen mit top: 50% */
+    transform: translateY(-50%);
+    /* Zentriert den Text vertikal zusammen mit top: 50% */
 
     /* z-index bestimmt die Stapelreihenfolge überlappender Elemente.
        Höhere Werte liegen vor niedrigeren Werten. */
     z-index: 2;
 }
 
-.hero-content > h1 {
+.hero-content>h1 {
+    font-size: 60px;
+    font-weight: 700;
     padding-bottom: 32px;
+    color: rgba(84, 55, 13, 1);
+}
+
+.hero-content>p {
+    font-size: 28px;
+    font-weight: 500;
+    color: rgba(84, 55, 13, 1);
 }
 
 .cappadocia-icon {
@@ -126,17 +246,32 @@ nav > a {
     left: 1735px;
     bottom: 95px;
 
-    z-index: 3; /* Liegt vor dem Text (z-index: 2), sofern sie sich überlappen */
+    z-index: 3;
+    /* Liegt vor dem Text (z-index: 2), sofern sie sich überlappen */
+    animation: iconSpin 10s linear infinite;
 }
 
 /* Definiert die Bewegung des gesamten Sliders von rechts nach links */
 @keyframes slideLeft {
     from {
-        transform: translateX(0); /* Startposition */
+        transform: translateX(0);
+        /* Startposition */
     }
 
     to {
-        transform: translateX(-1200px); /* Verschiebt den Slider 1200px nach links */
+        transform: translateX(-1200px);
+        /* Verschiebt den Slider 1200px nach links */
+    }
+}
+
+/* Dreht das Icon dauerhaft um 360 Grad */
+@keyframes iconSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }
 
@@ -144,15 +279,428 @@ nav > a {
 /* Main */
 
 main {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin: 0 auto;
-    padding: 120px 120px 120px 160px;
+    padding: 120px 120px 160px 120px;
     gap: 120px;
     flex: 1;
 }
 
+.highlights {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 88px;
+    flex-direction: column;
+}
+
 .highlights-headline {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlights-headline-text {
+    display: flex;
+    gap: 8px;
+}
+
+.highlights-headline>p {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Palanquin';
+    font-weight: 500;
+    color: rgba(84, 55, 13, 1);
+    line-height: 110%;
+}
+
+.slider_highlights {
+    overflow: hidden
+        /*Wir verstecken die überlappenden bilder*/
+    ;
+    position: relative;
+    /*Die Box für den Slider*/
+    width: 1200px;
+    height: 533px;
+    border-top-right-radius: 100px;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 22px;
+    padding-bottom: 44px;
+}
+
+.slider_highlights input {
+    z-index: 2;
+    /*Stappelreihenfolge um so größer die Zahl um so höhere ebene*/
+}
+
+.slider_highlights_wrapper {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 400%;
+    /* Vier Bilder nebeneinander */
+    height: 100%;
+
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slider_highlights_element {
+    position: relative;
+    width: 25%;
+    /* Jedes Bild nimmt ein Viertel des Wrappers ein */
+    height: 100%;
+
+    flex-shrink: 0;
+    /* Verhindert das Verkleinern der Bilder */
+    object-fit: cover;
+    /* Füllt den Slider ohne Bildverzerrung */
+    text-decoration: none;
+    /* Entfernt die Link-Unterstreichung */
+    color: inherit;
+    /* Verhindert die standardmäßige Linkfarbe */
+    cursor: pointer;
+    /* Zeigt beim Hover den Mauszeiger als Hand */
+
+}
+
+.slider_highlights_element>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider_highlights_text {
+    position: absolute;
+    /* Positioniert den Text über dem Bild */
+    top: 53px;
+    left: 44px;
+    padding: 16px 24px;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    z-index: 2;
+    /* Text liegt über dem Bild */
+}
+
+.slider_highlights_text>p {
+    font-size: 28px;
+    font-family: 'Palanquin';
+    font-weight: 400;
+    line-height: 1.1;
+    color: white;
+}
+
+
+.slider_highlights input[value="one"]:checked~.slider_highlights_wrapper {
+    transform: translateX(0);
+}
+
+.slider_highlights input[value="two"]:checked~.slider_highlights_wrapper {
+    transform: translateX(-25%);
+}
+
+.slider_highlights input[value="three"]:checked~.slider_highlights_wrapper {
+    transform: translateX(-50%);
+}
+
+.slider_highlights input[type="radio"] {
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+.slider_highlights input[type="radio"]:checked {
+    width: 40px;
+    border-radius: 20px;
+    background-color: rgba(241, 201, 83, 1);
+}
+
+.slider_highlights input[value="four"]:checked~.slider_highlights_wrapper {
+    transform: translateX(-75%);
+}
+
+
+.faQ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    flex-direction: column;
+}
+
+.faQ-headline {
+    display: flex;
+    gap: 8px;
+}
+
+.faQ-questions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 32px;
+}
+
+
+.faQ-questions-element {
+    border-radius: 12px;
+    padding: 14px 16px;
+    background-color: rgba(241, 201, 83, 1);
+}
+
+.faQ-questions-element>summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faQ-questions-element>summary::-webkit-details-marker {
+    display: none;
+    /* Entfernt den Standardpfeil */
+}
+
+.faQ-questions-element summary>span {
+    font-size: 24px;
+    font-family: 'Palanquin';
+    font-weight: 700;
+}
+
+.faQ-questions-element summary>img {
+    transition: transform 0.3s ease;
+}
+
+/* Dreht den Pfeil, sobald die Antwort geöffnet ist */
+.faQ-questions-element[open] summary>img {
+    transform: rotate(180deg);
+}
+
+.faQ-answer {
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: white;
+    font-family: 'Palanquin';
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    width: 100%;
+    padding: 0px 50px;
+}
+
+.contact-headline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 24px;
+}
+
+.contact-headline-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-headline>p {
+    font-size: 20px;
+    font-family: 'Palanquin';
+    text-align: center;
+    color: rgba(84, 55, 13, 1);
+    line-height: 110%;
+}
+
+.contact-formular {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+}
+
+.contact-formular-questions {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.personal-data-questions {
+    display: flex;
+    justify-content: space-between;
+    gap: 17px;
+}
+
+.personal-data-questions-element {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 17px;
+}
+
+.personal-data-questions-element>label,
+.helping-questions>label {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Palanquin';
+    color: rgba(84, 55, 13, 1);
+}
+
+.personal-data-questions-element>input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid rgba(84, 55, 13, 1);
+    outline: none;
+    background-color: transparent;
+    font-size: 24px;
+    color: rgba(78, 164, 135, 1);
+    font-family: 'Palanquin';
+}
+
+.helping-questions {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.helping-questions>textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(84, 55, 13, 1);
+    outline: none;
+    resize: vertical;
+    background-color: transparent;
+    color: rgba(78, 164, 135, 1);
+    font-size: 24px;
+    font-family: 'Palanquin';
+}
+
+.personal-data-questions-element>input:focus,
+.helping-questions>textarea:focus {
+    border-bottom: 2px solid rgb(78, 164, 135);
+}
+
+.personal-data-questions-element>input:valid,
+.helping-questions>textarea:valid {
+    color: #4EA487;
+}
+
+
+.confirmation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.confirmation-checkbox-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Zentriert Checkbox und Text */
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Fehlermeldung unsichtbar, Platz bleibt reserviert */
+.privacy-error {
+    visibility: hidden;
+    width: 100%;
+    color: rgb(229, 57, 53);
+    font-size: 14px;
+    text-align: center;
+    padding-right: 325px;
+}
+
+/* Fehlermeldung bei ungültiger Checkbox anzeigen */
+.confirmation-checkbox-section:has(input:user-invalid) .privacy-error {
+    visibility: visible;
+}
+
+/*Zeigt sie an, da das Feld als required zählt*/
+.confirmation-checkbox-section:has(input:invalid) .privacy-error {
+    visibility: visible;
+}
+
+
+.confirmation-checkbox-section>input {
+    width: 16px;
+    height: 16px;
+    accent-color: rgba(78, 164, 135, 1);
+    cursor: pointer;
+}
+
+/*.confirmation-checkbox-section input:hover {
+    accent-color: #F1CD53;
+}
+
+.confirmation-checkbox-section input:checked {
+    accent-color: #4EA487;
+}*/
+
+
+.confirmation-checkbox-section>label {
+    font-size: 15px;
+    color: rgba(84, 55, 13, 1);
+    cursor: pointer;
+}
+
+.confirmation-checkbox-section>label>button {
+    color: rgba(78, 164, 135, 1);
+    font-size: 15px;
+    font-family: 'Palanquin';
+    font-weight: 500;
+    border: none;
+    background-color: white;
+}
+
+.confirmation-checkbox-section>label>button:hover {
+    font-family: 'Palanquin';
+    font-weight: 700;
+}
+
+.confirmation-section>button {
+    width: 140px;
+    height: 50px;
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 40px;
+    background-color: white;
+    font-family: 'Arima';
+    color: rgb(119, 119, 119);
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.confirmation-section:has(input[type="checkbox"]:checked)>button {
+    background-color: rgba(78, 164, 135, 1);
+    color: rgba(241, 201, 83, 1);
+    border-color: rgba(78, 164, 135, 1);
+    cursor: pointer;
+}
+
+/* Hover-Effekt für den aktivierten Send-Button */
+.confirmation-section:has(input:checked)>button:hover {
+    box-shadow: 0 4px 4px 0 rgba(78, 164, 135, 0.3);
 }
 
 /* Footer */
@@ -168,6 +716,13 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 0px 120px;
+}
+
+.footer-information p {
+    font-family: 'Palanquin';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%;
 }
 
 .footer-information {
@@ -186,12 +741,23 @@ footer {
 }
 
 .footer-navbar {
+    display: flex;
+    align-items: center;
     gap: 16px;
 }
+
+.footer-navbar>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 /* Content-Begrenzung ab 1440px */
 
 @media screen and (min-width: 1440px) {
+
     .content-container,
     main {
         max-width: 1440px;
