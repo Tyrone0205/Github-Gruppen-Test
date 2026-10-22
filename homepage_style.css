@@ -931,4 +931,33 @@ footer {
         line-height: 1.3;
     }
 
+        /* Footer */
+
+    .footer-content {
+        padding: 0 clamp(20px, 3vw, 40px);
+        gap: 16px;
+    }
+
+    .footer-information {
+        gap: clamp(12px, 2vw, 32px);
+    }
+
+    .footer-information p {
+        font-size: clamp(13px, 1.4vw, 16px);
+    }
+
+    .copyright-information {
+        gap: 6px;
+        white-space: nowrap;
+    }
+
+    .footer-navbar {
+        gap: clamp(8px, 1vw, 16px);
+        flex-shrink: 0;
+    }
+
+    .footer-navbar>a>img {
+        width: clamp(24px, 2.5vw, 32px);
+        height: auto;
+    }
 }
