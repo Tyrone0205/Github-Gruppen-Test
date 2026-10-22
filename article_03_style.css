@@ -195,11 +195,11 @@ main {
 .share-pfeil {
    height: 48px;
 }
-.share-section p {
+.share-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 66px;
     padding-top: 80px;
     text-align: center;
   
@@ -218,4 +218,27 @@ main {
 
 .share-button img {
     height: 24px;
+}
+
+.share-row {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.share-section p {
+    font-size: 24px;
+    color: rgba(84, 55, 13, 1);
+   
+}
+
+.share-pfeil {
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    width: 95px;
+    height: 98px;
+    margin-right: 50px;
+    bottom: 8px;
 }
