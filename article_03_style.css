@@ -128,6 +128,7 @@ main {
     align-items: center;
     color: rgba(84, 55, 13, 1);
     padding-top: 88px;
+    padding-bottom: 80px;
     gap: 24px;
 }
 
@@ -135,6 +136,10 @@ main {
     width: 640px;
     max-width: 100%;
     border-radius: 53px;
+    object-fit: contain;
+    border-radius: 53px;
+    box-shadow: -2px 4px 11.6px rgba(0, 0, 0, 0.25);;
+}
 }
 
 .unter-grafik {
@@ -146,7 +151,7 @@ main {
     display: flex;
     justify-content: space-between;
     gap: 50px;
-    padding: 20px;
+    padding: 80px;
 }
 
 .two-grafik {
@@ -154,7 +159,7 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    width: 519px s;
+    width: 519px;
 }
 
 .two-grafik img {
@@ -165,4 +170,9 @@ main {
     background-color: white;
     border-radius: 53px;
     box-shadow: -2px 4px 11.6px rgba(0, 0, 0, 0.25);;
+}
+
+.two-grafik h3 {
+    font-size: 32px;
+    color: rgba(84, 55, 13, 1);
 }
