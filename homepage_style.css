@@ -964,5 +964,16 @@ footer {
 
 /* Mobile */
 @media screen and (max-width: 785px) {
+    /* Allgemeines Layout */
+
+    main {
+        padding: 70px 20px;
+        gap: 80px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
     
 }
