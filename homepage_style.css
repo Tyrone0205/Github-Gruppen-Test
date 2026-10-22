@@ -1039,4 +1039,15 @@ footer {
         width: 30px;
     }
 
+    /* FAQ */
+
+    .faQ-questions-element summary>span {
+        font-size: 14px;
+    }
+
+    .faQ-answer>p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
 }
