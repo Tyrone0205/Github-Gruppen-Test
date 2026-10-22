@@ -242,3 +242,26 @@ main {
     margin-right: 50px;
     bottom: 8px;
 }
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    background-color: rgba(78, 164, 135, 1);
+
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 72px;
+    color: white;
+
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
