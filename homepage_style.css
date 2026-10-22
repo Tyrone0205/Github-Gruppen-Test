@@ -1162,4 +1162,27 @@ footer {
         bottom: auto;
     }
 
+        /* Highlights - Ergänzung */
+
+    .highlights-headline-text {
+        align-items: center;
+    }
+
+    .highlights-headline-text>img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .slider_highlights_text>p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        overflow: hidden;
+    }
+
+    .slider_highlights_text>p>br {
+        display: none;
+    }
+
 }
