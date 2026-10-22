@@ -3,12 +3,14 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 main {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 146px;
 
 }
+
 .header {
     display: flex;
     align-items: center;
@@ -48,7 +50,7 @@ main {
 .eyebrow-text {
     color: #4EA487;
     font-size: 40px;
-   
+
 }
 
 .hero-text {
@@ -57,6 +59,7 @@ main {
     gap: 16px;
     max-width: 902px;
 }
+
 .hero-text h1 {
     color: #F1C953;
     font-size: 64px;
@@ -72,13 +75,13 @@ main {
     display: flex;
     gap: 32px;
 }
+
 .textsection p {
     font-size: 24px;
     color: rgba(61, 61, 61, 1)
-
 }
 
-.visitenkarte { 
+.visitenkarte {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,6 +92,7 @@ main {
     padding: 16px;
     min-width: 272px;
 }
+
 .visitenkarte h3 {
     color: rgba(84, 55, 13, 1);
     font-size: 18px;
@@ -97,7 +101,7 @@ main {
 
 .visitenkarte p {
     color: rgba(84, 55, 13, 1);
-   font-size: 18px;
+    font-size: 18px;
 
 }
 
@@ -111,11 +115,11 @@ main {
     display: flex;
     align-items: center;
     gap: 30px;
-    
+
 }
 
 .info-item img {
-   height: 18px;
+    height: 18px;
 }
 
 .grafik-section {
@@ -134,12 +138,30 @@ main {
 }
 
 .unter-grafik {
-padding-top: 50px;
+    padding-top: 50px;
 }
 
 
 .statistics-section {
     display: flex;
-    justify-content: column;
-    gap: 50px
+    justify-content: space-between;
+    gap: 50px;
+    padding: 20px:
+}
+
+.two-grafik {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.two-grafik img {
+   width: 519px;
+    height: 471px;
+    max-width: 100%;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 53px;
+    box-shadow: -2px 4px 11.6px rgba(0, 0, 0, 0.25);;
 }
