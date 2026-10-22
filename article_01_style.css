@@ -481,7 +481,7 @@ main {
 
 .footer {
     width: 100%;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -589,7 +589,7 @@ a {
     margin-top: -10px;
 }
 
-.menu-bar-mobile{
+.menu-bar-mobile {
     width: 100%;
     display: flex;
     position: fixed;
@@ -606,7 +606,8 @@ a {
     padding-right: 25px;
     background-color: rgba(241, 201, 83, 1);
 }
-.menu-bar-container{
+
+.menu-bar-container {
     display: flex;
     /* gap: 48px; */
     width: 304px;
@@ -615,21 +616,24 @@ a {
 }
 
 @media screen and (min-width:1440px) {
-    .menu-bar-mobile{
+    .menu-bar-mobile {
         display: none;
     }
-    .footer-left-reverse > .slide-imprint {
+
+    .footer-left-reverse>.slide-imprint {
         margin-left: 0;
     }
 }
 
 @media screen and (max-width:1439px) {
-    .footer-left-reverse > .slide-imprint {
+    .footer-left-reverse>.slide-imprint {
         margin-left: -90px;
     }
-     .footer {
-    margin-bottom: 88px;
-}
+
+    .footer {
+        margin-bottom: 88px;
+    }
+
     .nav-links {
         display: none;
     }
@@ -661,7 +665,7 @@ a {
         align-items: left;
         margin-left: -90px;
     }
-   
+
 
     .footer-left-reverse {
         flex-direction: column;
@@ -671,7 +675,7 @@ a {
     }
 
     .footer-right {
-        width: 24px;
+        /* width: 24px; */
         height: 24px;
     }
 }
@@ -790,66 +794,107 @@ a {
     .follow-and-share {
         width: 343px;
     }
-    
-    .follow-and-share > p {
+
+    .follow-and-share>p {
         font-size: 18px;
     }
-    .follow-and-share > img {
+
+    .follow-and-share>img {
         width: 50px;
         height: 30.41px;
     }
-    .share-button a{
+
+    .share-button a {
         margin-top: -50px;
     }
+
     .follow-arrow {
-    width: 106.9px;
-    height: 65.03px;
-    border: 3px;
-    rotate: 34deg;
-    margin-left: -300px;
-    margin-top: -30px;
+        width: 106.9px;
+        height: 65.03px;
+        border: 3px;
+        rotate: 34deg;
+        margin-left: -300px;
+        margin-top: -30px;
+    }
+
+    .follow-and-share>.share-buttons{
+        margin-left: 0;
+            flex-direction: column;
+    }
+    .share-popup-links {
+    margin-top: 10px;
+    flex-direction: column;
+    }
+    .links {
+    display: flex;
+            flex-direction: row;
+        gap: 20px;
+        width: 100%;
+    }
+    .social-media-icon{
+        width: 24px;
+        height: 24px;
+    }
+    .footer{
+        padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
+    }
+    .footer-left{
+        margin-left: 0;
+    }
+
+    /* .share-popup-links {
+        margin-top: -50px;
+    }
+    .share-icon {
+        margin-left: 5px;
+    }
+    .links{
+        font-size: 18px;
+        margin-left: -10px;
+    } */
+
+}
+
+@media screen and (min-width:768px) and (max-width:1440px) {}
+
+@media screen and (min-width:1440px) and (max-width:1919px) {
+    .container {
+        width: 1201px;
+    }
+
+    .content {
+        width: 1201px;
+    }
+
+    .definition {
+
+        width: 1200px;
+    }
+
+    .footer-container {
+        width: 1200px;
     }
 }
 
-    @media screen and (min-width:768px) and (max-width:1440px) {
-
+@media screen and (min-width:1920px) {
+    .container {
+        width: 1440px;
     }
 
-    @media screen and (min-width:1440px) and (max-width:1919px) {
-        .container {
-            width: 1201px;
-        }
-
-        .content {
-            width: 1201px;
-        }
-
-        .definition {
-
-            width: 1200px;
-        }
-
-        .footer-container {
-            width: 1200px;
-        }
+    .content {
+        width: 1440px;
     }
 
-    @media screen and (min-width:1920px) {
-        .container {
-            width: 1440px;
-        }
+    .definition {
 
-        .content {
-            width: 1440px;
-        }
-
-        .definition {
-
-            width: 1440px;
-        }
-
-        .footer-container {
-            width: 1440px;
-        }
-
+        width: 1440px;
     }
+
+    .footer-container {
+        width: 1440px;
+    }
+
+}
