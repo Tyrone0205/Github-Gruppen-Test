@@ -1000,4 +1000,32 @@ footer {
         display: none;
     }
 
+    /* Highlights-Slider */
+
+    .slider_highlights {
+        width: 100%;
+        height: 533px;
+        border-top-right-radius: 100px;
+        padding-bottom: 24px;
+        gap: 16px;
+    }
+
+    .slider_highlights_text {
+        top: 93px;
+        left: 14px;
+        right: 14px;
+        padding: 16px;
+    }
+
+    .slider_highlights_text>h3 {
+        font-size: 28px;
+        line-height: 1;
+        padding-bottom: 8px;
+    }
+
+    .slider_highlights_text>p {
+        font-size: 20px;
+        line-height: 1.1;
+    }
+
 }
