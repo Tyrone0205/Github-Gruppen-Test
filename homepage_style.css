@@ -896,4 +896,15 @@ footer {
         font-size: clamp(15px, 1.7vw, 21px);
         line-height: 1.2;
     }
+
+    /* Radio-Buttons */
+
+    .slider_highlights input[type="radio"] {
+        width: 20px;
+        height: 20px;
+    }
+
+    .slider_highlights input[type="radio"]:checked {
+        width: 30px;
+    }
 }
