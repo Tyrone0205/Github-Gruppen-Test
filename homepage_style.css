@@ -1050,4 +1050,14 @@ footer {
         line-height: 1.4;
     }
 
+    /* Contact */
+
+    .contact {
+        padding: 0;
+    }
+
+    .contact-headline>p {
+        display: none;
+    }
+
 }
