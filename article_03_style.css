@@ -1,34 +1,122 @@
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Arima';
+    font-style: normal;
+    src: url('./assets/fonts/arima-v7-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* palanquin-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Palanquin';
+    font-style: normal;
+    src: url('./assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* palanquin-dark-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Palanquin Dark';
+    font-style: normal;
+    src: url('./assets/fonts/palanquin-dark-v17-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
 * {
 
     margin: 0;
     box-sizing: border-box;
 }
+
 main {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 146px;
+    padding: 80px 120px 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 88px;
 
 }
+
 .header {
+    background-color: rgba(78, 164, 135, 1);
+    
+
+}
+
+.inline {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 120px;
     display: flex;
     align-items: center;
-    gap: 72px;
-    padding: 0 146px;
-    background-color: rgba(78, 164, 135, 1);
     height: 128px;
     font-size: 24px;
-
+    gap: 100px;
 }
 
 .nav-bar {
     display: flex;
-    gap: 32px;
+    gap: 100px;
 }
 
-
-.nav-bar a {
+.nav-bar >a {
+    position: relative;
     color: white;
+    font-size: 24px;
+    font-family: 'Arima';
+    font-weight: 700;
     text-decoration: none;
+}
+
+/* Nur die Unterstreichungen im Header ausblenden */
+.nav-bar >a>img {
+    display: none;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+/* Unterstreichung beim Hover anzeigen */
+.nav-bar >a:hover>img {
+    display: block;
+}
+
+/* Individuelle Größen der Unterstreichungen */
+.underline-highlights {
+    width: 120px;
+    height: 13px;
+}
+
+.underline-faq {
+    top: 70%;
+    width: 54px;
+    height: 5px;
+}
+
+.underline-contact {
+    width: 90px;
+    height: 7px;
+}
+
+/* Aktuell ausgewählten Navigationspunkt gelb färben */
+body:has(#highlights-id:target) nav>a[href="#highlights-id"],
+body:has(#faQ-id:target) nav>a[href="#faQ-id"],
+body:has(#contact-id:target) nav>a[href="#contact-id"] {
+    color: #F1CD53;
+}
+
+/* Unterstreichung beim Hover anzeigen */
+nav>a:hover>img {
+    display: block;
 }
 
 .logo {
@@ -40,15 +128,17 @@ main {
     justify-content: space-between;
     align-items: flex-start;
     gap: 50px;
-    padding: 80px 0;
+
+
 
 
 }
 
 .eyebrow-text {
+    font-family: 'Palanquin';
     color: #4EA487;
     font-size: 40px;
-   
+
 }
 
 .hero-text {
@@ -57,7 +147,12 @@ main {
     gap: 16px;
     max-width: 902px;
 }
+
 .hero-text h1 {
+     font-family: 'Arima';
+     font-weight: 700;
+    line-height: 120%;
+    
     color: #F1C953;
     font-size: 64px;
     max-width: 826px;
@@ -71,14 +166,18 @@ main {
 .info {
     display: flex;
     gap: 32px;
+    margin-top: 40px;
+    font-size: 16px;
+    
 }
+
 .textsection p {
+    
     font-size: 24px;
-    color: rgba(61, 61, 61, 1)
-
+    color: rgba(61, 61, 61, 1);
 }
 
-.visitenkarte { 
+.visitenkarte {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,6 +188,7 @@ main {
     padding: 16px;
     min-width: 272px;
 }
+
 .visitenkarte h3 {
     color: rgba(84, 55, 13, 1);
     font-size: 18px;
@@ -96,8 +196,11 @@ main {
 }
 
 .visitenkarte p {
+    font-family: 'Palanquin';
+    font-weight: 400;
+    line-height: 120%;
     color: rgba(84, 55, 13, 1);
-   font-size: 18px;
+    font-size: 18px;
 
 }
 
@@ -110,12 +213,13 @@ main {
 .info-item {
     display: flex;
     align-items: center;
-    gap: 30px;
-    
+    gap: 6px;
+
 }
 
 .info-item img {
-   height: 18px;
+    padding: -10px;
+    
 }
 
 .grafik-section {
@@ -123,17 +227,410 @@ main {
     flex-direction: column;
     align-items: center;
     color: rgba(84, 55, 13, 1);
-    padding-top: 88px;
     gap: 24px;
+}
+.grafik-section h2 {
+    font-family: 'Arima';
+    font-weight: 600;
+    font-size: 32px;
+
 }
 
 .grafik-section img {
     width: 640px;
     max-width: 100%;
     border-radius: 53px;
+    object-fit: contain;
+    border-radius: 53px;
+    box-shadow: -2px 4px 11.6px rgba(0, 0, 0, 0.25);
+    ;
+}
+
+.grafik-section p {
+    font-size: 24px;
 }
 
 .unter-grafik {
-padding-top: 50px;
+    
 }
 
+
+.statistics-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.two-grafik {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 519px;
+}
+
+.two-grafik img {
+    margin-top: auto;
+    width: 519px;
+    height: 471px;
+    max-width: 100%;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 53px;
+    box-shadow: -2px 4px 11.6px rgba(0, 0, 0, 0.25);
+    ;
+}
+
+.two-grafik h3 {
+    font-family: 'Arima';
+    font-weight: 600;
+    font-size: 32px;
+    color: rgba(84, 55, 13, 1);
+
+}
+
+.two-grafik p {
+    font-family: 'Palanquin';
+    font-weight: 400;
+line-height: 120%;
+    font-size: 24px;
+    justify-content: space-between;
+}
+
+.text-section p {
+    font-family: 'Palanquin';
+    font-weight: 400;
+    line-height: 120%;
+    font-size: 24px;
+}
+.share-pfeil {
+   height: 48px;
+}
+.share-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 66px;
+
+    text-align: center;
+  
+}
+
+.share-section p {
+    font-family: 'Arima';
+    font-weight: 500;
+    line-height: 120%;
+    font-size: 24px;
+}
+
+.share-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(78, 164, 135, 1);
+    padding: 8px 24px;
+    color: rgba(241, 201, 83, 1);
+    border-radius: 40px;
+    text-decoration: none;
+}
+
+.share-button img {
+    height: 24px;
+}
+
+.share-row {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.share-section p {
+    font-size: 24px;
+    color: rgba(84, 55, 13, 1);
+   
+}
+
+.share-pfeil {
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    width: 95px;
+    height: 98px;
+    margin-right: 50px;
+    bottom: 8px;
+}
+
+.share-links {
+    display: none;
+    align-items: center;
+    position: absolute;
+    left: 100%;
+    white-space: nowrap;
+
+}
+
+.share-row:hover .share-links {
+    display: flex;
+
+}
+.share-links-list {
+    display: flex;
+    flex-direction: column;
+
+}
+.share-links-list a {
+    color: rgba(78, 164, 135, 1);
+}
+.footer {
+    background-color: rgba(78, 164, 135, 1);
+}
+
+.footer-inline {
+    justify-content: space-between;
+    height: 120px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 72px;
+    color: white;
+
+}
+.footer-nav {
+    display: flex;
+    gap: 72px;
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    border-bottom: 2px solid rgba(241, 201, 83, 1);
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+}
+
+.socials {
+    display: flex;
+    gap: 16px;
+}
+
+
+
+.socials img {
+    height: 32px;
+}
+
+.menu-bar-mobile {
+    display: none;
+}
+/* ===== Tablet ===== */
+@media screen and (max-width: 1440px) {
+
+    .inline,
+    main {
+        padding-left: max(calc(50% - 574px), 15px);
+        padding-right: max(calc(50% - 574px), 15px);
+    }
+
+    .statistics-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .two-grafik {
+        flex: 1;
+        width: auto;
+    }
+
+    .two-grafik img {
+        width: 100%;
+        height: min(32.7vw, 471px);
+    }
+
+    .copyright {
+        white-space: nowrap;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 785px) {
+
+    .main {
+    padding: 24px 15px 0 15px;
+}
+
+.inline {
+    justify-content: center;
+    height: 70px;
+    padding: 5px 16px;
+}
+
+.nav-bar {
+    display: none;
+}
+
+
+.logo {
+    height: 56px;
+
+}
+
+
+.eyebrow-text {
+    font-size: 20px;
+}
+.hero-text h1 {
+font-size: 40px;
+
+}
+
+.bodytext {
+    font-size: 18px;
+}
+.info-item p {
+    font-size: 16px;
+
+}
+
+
+
+
+.hero-section {
+    flex-direction: column;
+    align-items: center;
+}
+
+.visitenkarte {
+    width: 100%;
+
+
+}
+.visitenkarte p {
+    font-size: 16px;
+}
+.visitenkarte h2 {
+    font-size: 16px;
+}
+
+.textsection p {
+    font-size: 16px;
+}
+
+.grafik-section h2 {
+    font-size: 20px;
+}
+
+.info {
+    flex-wrap: wrap;
+}
+
+
+.grafik-section img {
+    width: 100%;
+}
+
+.statistics-section {
+    flex-direction: column;
+
+}
+
+.statistics-section h3 {
+    font-size: 20px;
+}
+.two-grafik p {
+    font-size: 16px;
+}
+
+.text-section p {
+    font-size: 16px;
+}
+
+.share-section p {
+    font-size: 18px;
+}
+.two-grafik {
+    width: 100%;
+}
+
+.two-grafik img {
+    width: 100%;
+    height: auto;
+
+}
+
+
+
+.share-section {
+    gap: 48px;
+}
+
+.share-pfeil {
+    width: auto;
+    height: 55px;
+}
+
+.footer {
+    height: auto;
+    display: block;
+    padding-bottom: 88px;
+}
+.footer-inline {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: auto;
+    padding: 30px 24px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.footer-nav {
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+.socials {
+    gap: 16px;
+}
+.socials img {
+    height: 24px;
+}
+
+
+.menu-bar-mobile {
+    display: flex;
+    justify-content: space-between;
+   
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px 25px;
+    background-color: rgba(241, 201, 83, 1);
+}
+.menu-bar-mobile img {
+
+    height: 40px;
+
+}
+
+}
