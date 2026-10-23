@@ -4,20 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="article_02_style.css" />
+    <link rel="icon" type="img/png" href="assets/icon/travel_blog_icon.svg"/>
 
-    <title>Bolg Article 02</title>
+    <title>Blog Article_02</title>
   </head>
 
   <body>
 
     <header>
-              <div class="content-container header-content">
+        <div class="content-container header-content">
             <img src="./assets/icon/travel_blog_icon.svg" alt="Travel Blog Icon">
 
             <nav>
-                <a href="#highlights-id">Highlights</a>
-                <a href="#faq-id">FAQ</a>
-                <a href="#contact-id">Contact</a>
+                <a href="homepage.html#highlights-id">
+                    Highlights
+                    <img  class="underline-highlights"  src="./assets/img/Vector 11.png" alt="Highlights">
+                </a>
+
+                <a href="homepage.html#faq-id">
+                    FAQ
+                    <img class="underline-faq"  src="./assets/img/Vector 13.png" alt="faq">
+                </a>
+
+                <a href="homepage.html#contact-id">
+                    Contact
+                    <img class="underline-contact" src="./assets/img/Vector 12.png" alt=contact"">
+                </a>
             </nav>
         </div>
     </header>
@@ -35,22 +47,30 @@
         </p>
 
         <div class="main-text-infos">
+          <div class="infos-row">
           <div class="main-text-infos-calendar">
             <img src="assets/icon/calendar_icon.svg" alt="calendar"/>
             <p>Date: 26.01.2026</p>
           </div>
+          
+           
+       
           <div class="main-text-infos-eyeglass">
             <img src="assets/icon/eyeglasses_icon.svg" alt="eyeglasses"/>
             <p>Readng time:6min</p>
+          </div>
           </div> 
+            <div class="infos-row">
           <div class="main-text-infos-eye">
             <img src="assets/icon/eye_icon.svg" alt=eye"/>
             <p>Read: 164</p>
           </div>
+        
           <div class="main-text-infos-share">
             <img src="assets/icon/share_green_icon.svg" alt="share-icon"/>
             <p>Shared: 18</p> 
           </div>
+        </div>
         </div>
       </section>
 
@@ -82,6 +102,7 @@
             </td>
           </tr>
         </table>
+      </div>
     </main>
 
  <div class="main-bottom-text">
@@ -158,6 +179,13 @@
           <img src="assets/icon/share_yellow_icon.svg">
           <p>Share</p>
         </a>
+      
+      <div class="share-links">
+        <img src="assets/icon/share.png" alt="share-icon"/>
+        <div class="share-links-social-media">
+          <a class="linkedin" href="https://www.linkedin.com/">LinkedIn</a>
+          <a class="whatsapp" href="https://www.whatsapp.com/">Whatsapp</a>
+        </div>
       </div>
     </div>
   
@@ -165,14 +193,14 @@
 
    <footer>
         <div class="content-container footer-content">
-            <div class="footer-information">
-                <div class="copyright-information">
-                    <img src="./assets/icon/copyright_icon.svg" alt="Copyright Icon">
-                    <p>Travel Blog 2026</p>
-                </div>
-                <p>Imprint</p>
-                <p>Cookie Preferences</p>
+           <div class="footer-information">
+            <div class="copyright-information">
+              <img src="./assets/icon/copyright_icon.svg" alt="Copyright Icon">
+              <p>Travel Blog 2026</p>
             </div>
+           <a href="./impressum.html">Imprint</a>
+            <p>Cookie Preferences</p>
+          </div>
             <nav class="footer-navbar">
                 <a href="https://www.tiktok.com/de-DE/" target="_blank">
                     <img src="./assets/icon/Tiktok_icon.svg" alt="Tiktok Icon">
@@ -191,6 +219,15 @@
         </div>
 
     </footer>
+
+    <section class="mobile-bottom-nav">
+        <a href="homepage.html" ><img src="assets/icon/home_icon.svg" alt="home-icon"></a>
+        <a href="homepage.html#highlights-id" ><img src="assets/icon/rocket_launch_icon.svg" alt="rocket-icon"></a>
+        <a href="homepage.html#faq-id" ><img src="assets/icon/live_help_icon.svg" alt="live-help-icon"></a>
+        <a href="homepage.html#contact-id" ><img src="assets/icon/person_pin_icon.svg" alt="person-pin-icon"></a>
+    
+
+    </section>
 
 </body>
 </html>
