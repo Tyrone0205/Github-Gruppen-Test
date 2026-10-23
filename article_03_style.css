@@ -350,9 +350,23 @@ font-size: 40px;
 }
 
 .visitenkarte {
-    width: 100%‚;
+    width: 100%;
 
 
+}
+.visitenkarte p {
+    font-size: 16px;
+}
+.visitenkarte h2 {
+    font-size: 16px;
+}
+
+.textsection p {
+    font-size: 16px;
+}
+
+.grafik-section h2 {
+    font-size: 20px;
 }
 
 .info {
@@ -366,8 +380,23 @@ font-size: 40px;
 
 .statistics-section {
     flex-direction: column;
+    padding: 80px 0;
 }
 
+.statistics-section h3 {
+    font-size: 20px;
+}
+.two-grafik p {
+    font-size: 16px;
+}
+
+.text-section p {
+    font-size: 16px;
+}
+
+.share-section p {
+    font-size: 18px;
+}
 .two-grafik {
     width: 100%;
 }
