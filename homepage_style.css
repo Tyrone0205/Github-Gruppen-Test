@@ -1230,4 +1230,35 @@ footer {
         gap: 24px;
     }
 
+    /* Checkbox-Bereich Mobile - Ergänzung */
+
+    .confirmation-checkbox-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .confirmation-checkbox-section>input {
+        flex-shrink: 0;
+    }
+
+    .confirmation-checkbox-section>label {
+        flex: 1;
+        min-width: 0;
+        font-size: 12px;
+    }
+
+    .confirmation-checkbox-section>label>button {
+        font-size: inherit;
+    }
+
+    .privacy-error {
+        width: 100%;
+        padding: 0 0 0 24px;
+        text-align: left;
+        font-size: 12px;
+    }
+
 }
