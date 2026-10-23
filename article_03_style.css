@@ -292,6 +292,23 @@ padding-bottom: 88px;
     gap: 16px;
 }
 
+
+
 .socials img {
     height: 32px;
 }
+
+@media screen and (max-width: 600px) {
+
+    .inline, main 
+    padding: 0 15px;
+}
+
+.inline {
+    justify-content: center;
+}
+
+.nav-bar {
+    display: none;
+}
+
