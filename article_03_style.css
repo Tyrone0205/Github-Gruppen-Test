@@ -300,15 +300,53 @@ padding-bottom: 88px;
 
 @media screen and (max-width: 600px) {
 
-    .inline, main 
+    .inline, main {
     padding: 0 15px;
 }
 
 .inline {
     justify-content: center;
+    height: 70px;
+    padding: 5px 16px;
 }
 
 .nav-bar {
     display: none;
 }
+
+
+.logo {
+    height: 56px;
+
+}
+
+main {
+    padding: 0 15px;
+
+}
+
+
+.hero-section {
+    flex-direction: column;
+}
+
+.visitenkarte {
+    width: 100px;
+
+
+}
+
+.info {
+    flex-wrap: wrap;
+}
+}
+
+.grafik-section img {
+    width: 100px;
+}
+
+.statistics-section {
+    flex-direction: column;
+}
+
 
