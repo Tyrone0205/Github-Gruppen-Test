@@ -331,7 +331,7 @@ main {
 }
 
 .visitenkarte {
-    width: 100px;
+    width: 100%‚;
 
 
 }
@@ -339,14 +339,43 @@ main {
 .info {
     flex-wrap: wrap;
 }
-}
+
 
 .grafik-section img {
-    width: 100px;
+    width: 100%;
 }
 
 .statistics-section {
     flex-direction: column;
 }
 
+.two-grafik {
+    width: 100%;
+}
 
+.two-grafik img {
+    width: 100%;
+    height: auto;
+
+}
+
+
+
+
+
+
+
+.footer-inline {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+}
+
+
+.footer-links {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+}
