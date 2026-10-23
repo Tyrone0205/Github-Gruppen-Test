@@ -297,7 +297,7 @@ main {
     border-radius: 20px;
     margin-left: -40px;
 
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.20);
 
 
@@ -316,13 +316,13 @@ main {
 
 .slider-element:hover {
     z-index: 2;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     transform: perspective(250px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
 
 }
 
 .slider-element:hover~.slider-element {
-    background-color: brown;
+    /* background-color: brown; */
     transform: perspective(250px) rotateY(-20deg) translateX(20px);
 
 }
@@ -632,16 +632,21 @@ a {
     }
 }
 
-
+ @media screen and (max-width:768px) {
+    
+     .footer{
+        margin-bottom: 88px;
+    }
+} 
 
 @media screen and (max-width:1439px) {
     .footer-left-reverse>.slide-imprint {
         margin-left: -90px;
     }
 
-    .footer {
+    /* .footer {
         margin-bottom: 88px;
-    }
+    }    */
 
     .nav-links {
         display: none;
@@ -1158,8 +1163,15 @@ a {
 }
 
 @media screen and (min-width:768px) and (max-width:1439px) {
+
     main {
         padding-top: 80px;
+    }
+     .menu-bar-mobile {
+        display: none;
+    }
+     .footer{
+        margin-bottom: 0px;
     }
 
     .container {
@@ -1319,16 +1331,18 @@ a {
         padding-bottom: 30px;
         padding-left: 24px;
         padding-right: 24px;
-        margin-bottom: 88px;
+        /* margin-bottom: 88px; */
     }
 
     .footer-left {
         margin-left: 0;
     }
 
-    /* .menu-bar-container {
-        width: 500px;
-    } */
+    .menu-bar-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    } 
 }
 @media screen and (min-width:320px) and (max-width:499px) {
     /* 370px Mobil Kapsayıcı */
@@ -1352,7 +1366,7 @@ a {
         .slider-window {
             width: 100%;
             overflow: hidden;
-            padding: 0 85px; /* Ortadaki kartı merkezlemek için */
+            padding: 0 60px; /* Ortadaki kartı merkezlemek için */
         }
 
         /* Kaydırıcı Alan */
@@ -1505,9 +1519,9 @@ a {
 
 
 @media screen and (min-width:768px) and (max-width:1439px) {
-    /* 370px Mobil Kapsayıcı */
+        /* 370px Mobil Kapsayıcı */
         .slider-container {
-            width: 500px;
+            width: 300px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -1539,18 +1553,20 @@ a {
 
         /* Figma: 200px x 293px Kart Yapısı */
         .slider-element {
-            flex: 0 0 200px; 
-            height: 293px;   
+            flex: 0 0 150px; 
+            height: 250px;   
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
         }
 
         .slider-element img {
-            width: 100%;
-            height: 100%;
+            width: 150px;
+            height: 250px;
             object-fit: cover;
             display: block;
+            /* padding-top: 8px; */
+            margin-top: 8px;
         }
 
         /* CSS İLE KAYDIRMA HESAPLAMALARI (200px kart + 15px gap = 215px öteleme) */
