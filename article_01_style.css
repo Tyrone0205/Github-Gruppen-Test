@@ -515,6 +515,9 @@ main {
     align-items: center;
     gap: 72px;
 }
+.slide-imprint:hover{
+    text-decoration: underline;
+}
 
 .copyright-and-name {
     display: flex;
