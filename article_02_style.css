@@ -927,7 +927,7 @@ footer {
     justify-content: space-between;
     align-items: flex-end;
     gap: 8px;
-     padding-bottom: 24px;
+    padding-bottom: 24px;
 }
 
 .footer-information {
@@ -936,6 +936,10 @@ footer {
     gap: 8px;
     
   
+}
+
+.copyright-information{
+    order: 3;
 }
 
 }
