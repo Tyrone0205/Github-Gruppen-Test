@@ -779,7 +779,8 @@ footer {
 /* Desktop: ab 1221px */
 
 /* Tablet */
-@media screen and (min-width: 786px) and (max-width: 1220px) { 
+@media screen and (min-width: 786px) and (max-width: 1220px) {
+
     /* Allgemeines Layout */
 
     main {
@@ -791,7 +792,7 @@ footer {
         font-size: clamp(28px, 3.5vw, 42px);
     }
 
-    
+
     /* Header */
 
     .header-content {
@@ -806,6 +807,7 @@ footer {
     .header-content nav>a {
         font-size: clamp(18px, 2vw, 24px);
     }
+
 
     /* Hero / Yellow-Slider */
 
@@ -848,7 +850,8 @@ footer {
         bottom: 95px;
     }
 
-      /* Highlights */
+
+    /* Highlights */
 
     .highlights {
         gap: clamp(32px, 4vw, 56px);
@@ -869,7 +872,7 @@ footer {
         text-align: center;
     }
 
-     /* Highlights-Slider */
+    /* Highlights-Slider */
 
     .slider_highlights {
         width: 100%;
@@ -908,6 +911,7 @@ footer {
         width: 30px;
     }
 
+
     /* FAQ */
 
     .faQ-questions-element summary>span {
@@ -919,7 +923,7 @@ footer {
         line-height: 1.4;
     }
 
-    
+
     /* Contact */
 
     .contact {
@@ -931,7 +935,8 @@ footer {
         line-height: 1.3;
     }
 
-        /* Footer */
+
+    /* Footer */
 
     .footer-content {
         padding: 0 clamp(20px, 3vw, 40px);
@@ -975,12 +980,14 @@ footer {
         font-size: 40px;
     }
 
-     /* Header */
+
+    /* Header */
 
     .header-content {
         justify-content: center;
         padding: 0 16px;
     }
+
 
     /* Highlights */
 
@@ -999,6 +1006,7 @@ footer {
     .highlights-headline>p {
         display: none;
     }
+
 
     /* Highlights-Slider */
 
@@ -1028,6 +1036,7 @@ footer {
         line-height: 1.1;
     }
 
+
     /* Radio-Buttons */
 
     .slider_highlights input[type="radio"] {
@@ -1038,6 +1047,7 @@ footer {
     .slider_highlights input[type="radio"]:checked {
         width: 30px;
     }
+
 
     /* FAQ */
 
@@ -1050,6 +1060,7 @@ footer {
         line-height: 1.4;
     }
 
+
     /* Contact */
 
     .contact {
@@ -1060,7 +1071,8 @@ footer {
         display: none;
     }
 
-     /* Footer */
+
+    /* Footer */
 
     .footer-content {
         padding: 0 24px;
@@ -1162,7 +1174,7 @@ footer {
         bottom: auto;
     }
 
-        /* Highlights - Ergänzung */
+    /* Highlights - Ergänzung */
 
     .highlights-headline-text {
         align-items: center;
@@ -1261,7 +1273,7 @@ footer {
         font-size: 12px;
     }
 
-     /* Footer - Ergänzung */
+    /* Footer - Ergänzung */
 
     footer {
         height: auto;
@@ -1303,7 +1315,7 @@ footer {
         height: auto;
     }
 
-       /* Mobile-Bottom-Navigation */
+    /* Mobile-Bottom-Navigation */
 
     .mobile-bottom-nav {
         display: flex;
@@ -1336,5 +1348,4 @@ footer {
         width: 32px;
         height: 32px;
     }
-
 }
