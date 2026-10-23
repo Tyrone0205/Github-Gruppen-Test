@@ -446,5 +446,24 @@ font-size: 40px;
     align-items: flex-start;
 }
 
+.menu-bar-mobile {
+    display: flex;
+    justify-content: center;
+    gap: 64px;  
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px 25px;
+    background-color: rgba(241, 201, 83, 1);
+}
+.menu-bar-mobile img {
 
+    height: 40px;
+
+}
+
+body {
+    padding-bottom: 88px;
+}
 }
