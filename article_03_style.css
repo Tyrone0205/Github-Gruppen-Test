@@ -258,6 +258,27 @@ padding-bottom: 88px;
     bottom: 8px;
 }
 
+.share-links {
+    display: none;
+    align-items: center;
+    position: absolute;
+    left: 100%;
+    white-space: nowrap;
+
+}
+
+.share-row:hover .share-links {
+    display: flex;
+
+}
+.share-links-list {
+    display: flex;
+    flex-direction: column;
+
+}
+.share-links-list a {
+    color: rgba(78, 164, 135, 1);
+}
 .footer {
     display: flex;
     justify-content: space-between;
