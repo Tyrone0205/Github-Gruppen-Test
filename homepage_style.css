@@ -1261,4 +1261,46 @@ footer {
         font-size: 12px;
     }
 
+     /* Footer - Ergänzung */
+
+    footer {
+        height: auto;
+        min-height: 134px;
+    }
+
+    .footer-content {
+        min-height: 134px;
+        padding: 24px clamp(16px, 6.4vw, 24px);
+        gap: 12px;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .footer-information {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        min-width: 0;
+    }
+
+    .footer-information p {
+        font-size: clamp(13px, 4vw, 16px);
+    }
+
+    .copyright-information {
+        order: 3;
+        gap: 6px;
+        white-space: nowrap;
+    }
+
+    .footer-navbar {
+        gap: clamp(5px, 2vw, 8px);
+        flex-shrink: 0;
+    }
+
+    .footer-navbar>a>img {
+        width: clamp(19px, 6.4vw, 24px);
+        height: auto;
+    }
+
 }
