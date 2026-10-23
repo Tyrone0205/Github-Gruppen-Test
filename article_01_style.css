@@ -109,8 +109,8 @@ html {
     display: block;
 }
 
-.links:checked .links-text {
-    color: rgba(241, 201, 83, 1)
+.links:visited .links-text {
+    color: rgba(241, 201, 83, 1);
 }
 
 /* .links:active{
@@ -191,6 +191,7 @@ main {
     font-family: 'Arima', sans-serif;
     font-size: 64px;
     font-weight: 700;
+    font-style: bold;
     line-height: 120%;
     color: rgba(241, 201, 83, 1);
 }
@@ -296,7 +297,7 @@ main {
     border-radius: 20px;
     margin-left: -40px;
 
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.20);
 
 
@@ -315,13 +316,13 @@ main {
 
 .slider-element:hover {
     z-index: 2;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     transform: perspective(250px) rotateY(0deg) translateX(0px) scaleX(1.5) scaleY(1.2);
 
 }
 
 .slider-element:hover~.slider-element {
-    background-color: brown;
+    /* background-color: brown; */
     transform: perspective(250px) rotateY(-20deg) translateX(20px);
 
 }
@@ -480,6 +481,7 @@ main {
 
 .footer {
     width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -587,7 +589,65 @@ a {
     margin-top: -10px;
 }
 
+.menu-bar-mobile {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+
+    height: 88px;
+
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: rgba(241, 201, 83, 1);
+}
+
+.menu-bar-container {
+    display: flex;
+    /* gap: 48px; */
+    width: 304px;
+    justify-content: space-between;
+    height: 40px;
+}
+
+@media screen and (min-width:1440px) {
+    .menu-bar-mobile {
+        display: none;
+    }
+
+    .footer-left-reverse>.slide-imprint {
+        margin-left: 0;
+    }
+    .definition-line{
+        display:flex;
+        gap: 20px;
+    }
+    .footer{
+        margin-bottom: unset;
+    }
+}
+
+ @media screen and (max-width:768px) {
+    
+     .footer{
+        margin-bottom: 88px;
+    }
+} 
+
 @media screen and (max-width:1439px) {
+    .footer-left-reverse>.slide-imprint {
+        margin-left: -90px;
+    }
+
+    /* .footer {
+        margin-bottom: 88px;
+    }    */
+
     .nav-links {
         display: none;
     }
@@ -617,7 +677,9 @@ a {
         flex-direction: column-reverse;
         gap: 8px;
         align-items: left;
+        margin-left: -90px;
     }
+
 
     .footer-left-reverse {
         flex-direction: column;
@@ -627,12 +689,923 @@ a {
     }
 
     .footer-right {
-        width: 24px;
+        /* width: 24px; */
         height: 24px;
     }
 }
 
-@media screen and (min-width:375px) and (max-width:768px) {}
+@media screen and (min-width:320px) and (max-width:375px) {
+    main {
+        padding-top: 24px;
+    }
+
+        /* 375 -> 320
+        345 -> 310 */
+    .container {
+        width: 320px;
+    }
+
+    .content {
+        width: 310px;
+        gap: 40px;
+    }
+
+    .definition {
+        width: 310px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .definition-info {
+        gap: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .definition-line {
+        display: flex;
+        gap: 20px;
+    }
+
+    .definition-text {
+        width: 310px;
+    }
+
+    .definition-text-frame {
+        display: flex;
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .footer-container {
+        width: 310px;
+    }
+
+    .definition-text .header {
+        font-size: 20px;
+    }
+
+    .definition-text h1 {
+        font-size: 40px;
+        line-height: 100%;
+    }
+
+    .definition-text .p-content {
+        font-size: 18px;
+    }
+
+    .definition-card {
+        width: 310px;
+    }
+
+    .card-title {
+
+        font-size: 16px;
+    }
+
+    .slider {
+        width: 310px;
+    }
+
+
+    .info-list {
+        width: 300px;
+        font-size: 16px;
+
+        .pro-tipps {
+            width: 195.92px;
+            height: 66px;
+        }
+    }
+
+    .pro-tipps {
+        width: 310px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .pro-tipps-title {
+        margin-top: -20px;
+        margin-left: 10px;
+    }
+
+    .pro-tipps-list {
+        width: 310px;
+        font-size: 16px;
+        margin-left: 0px;
+        margin-top: -10px;
+    }
+
+    .info {
+        font-size: 16px;
+    }
+
+    .follow-and-share {
+        width: 310px;
+    }
+
+    .follow-and-share>p {
+        font-size: 18px;
+    }
+
+    .follow-and-share>img {
+        width: 50px;
+        height: 30.41px;
+    }
+
+    .share-button a {
+        margin-top: -50px;
+    }
+
+    .follow-arrow {
+        width: 106.9px;
+        height: 65.03px;
+        border: 3px;
+        rotate: 34deg;
+        margin-left: -200px;
+        margin-top: -30px;
+    }
+
+    .follow-and-share>.share-buttons {
+        margin-left: 0;
+        flex-direction: column;
+    }
+
+    .share-popup-links {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+     .footer-left-reverse>.slide-imprint {
+        margin-left: -80px;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .social-media-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .footer-left {
+        margin-left: 0;
+    }
+
+}
+
+
+@media screen and (min-width:375px) and (max-width:768px) {
+    main {
+        padding-top: 24px;
+    }
+
+    .container {
+        width: 375px;
+    }
+
+    .content {
+        width: 345px;
+        gap: 40px;
+    }
+
+    .definition {
+        width: 345px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .definition-info {
+        gap: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .definition-line {
+        display: flex;
+        gap: 20px;
+    }
+
+    .definition-text {
+        width: 345px;
+    }
+
+    .definition-text-frame {
+        display: flex;
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .footer-container {
+        width: 345px;
+    }
+
+    .definition-text .header {
+        font-size: 20px;
+    }
+
+    .definition-text h1 {
+        font-size: 40px;
+        line-height: 100%;
+    }
+
+    .definition-text .p-content {
+        font-size: 18px;
+    }
+
+    .definition-card {
+        width: 345px;
+    }
+
+    .card-title {
+
+        font-size: 16px;
+    }
+
+    .slider {
+        width: 345px;
+    }
+
+   
+
+    .info-list {
+        width: 335px;
+        font-size: 16px;
+
+        .pro-tipps {
+            width: 195.92px;
+            height: 66px;
+        }
+    }
+
+    .pro-tipps {
+        width: 345px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .pro-tipps-title {
+        margin-top: -20px;
+        margin-left: 10px;
+    }
+
+    .pro-tipps-list {
+        width: 343px;
+        font-size: 16px;
+        margin-left: 0px;
+        margin-top: -10px;
+    }
+
+    .info {
+        font-size: 16px;
+    }
+
+    .follow-and-share {
+        width: 343px;
+    }
+
+    .follow-and-share>p {
+        font-size: 18px;
+    }
+
+    .follow-and-share>img {
+        width: 50px;
+        height: 30.41px;
+    }
+
+    .share-button a {
+        margin-top: -50px;
+    }
+
+    .follow-arrow {
+        width: 106.9px;
+        height: 65.03px;
+        border: 3px;
+        rotate: 34deg;
+        margin-left: -300px;
+        margin-top: -30px;
+    }
+
+    .follow-and-share>.share-buttons {
+        margin-left: 0;
+        flex-direction: column;
+    }
+
+    .share-popup-links {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .social-media-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .footer-left {
+        margin-left: 0;
+    }
+
+
+}
+
+@media screen and (max-width:768px){
+    .slider {
+        max-width: 100%;
+        padding-left: 20px;
+    }
+
+
+.slider {
+    width: 100%;
+    max-width: 455px;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Radio inputlarını gizle */
+.slider input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Slider alanı */
+.slider-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    width: 100%;
+    height: 390px;
+    padding: 10px 0;
+
+    overflow: hidden;
+}
+
+/* Görsel kartları */
+.slider-element {
+    flex: 0 0 253px;
+    height: 368px;
+
+    border-radius: 22px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+
+    transition: transform 0.5s ease;
+}
+
+.slider-element img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* İlk görsel */
+#beach-1:checked ~ .slider-content {
+    transform: translateX(43px);
+}
+
+/* İkinci görsel */
+#beach-2:checked ~ .slider-content {
+    transform: translateX(-224px);
+}
+
+/* Üçüncü görsel */
+#beach-3:checked ~ .slider-content {
+    transform: translateX(-491px);
+}
+
+/* Dördüncü görsel */
+#beach-4:checked ~ .slider-content {
+    transform: translateX(-758px);
+}
+
+/* Beşinci görsel */
+#beach-5:checked ~ .slider-content {
+    transform: translateX(-1025px);
+}
+
+/* Navigasyon noktaları */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.slider-dots label {
+    display: block;
+    width: 28px;
+    height: 28px;
+
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #c9e3db;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Aktif nokta */
+#beach-1:checked ~ .slider-dots label[for="beach-1"],
+#beach-2:checked ~ .slider-dots label[for="beach-2"],
+#beach-3:checked ~ .slider-dots label[for="beach-3"],
+#beach-4:checked ~ .slider-dots label[for="beach-4"],
+#beach-5:checked ~ .slider-dots label[for="beach-5"] {
+    width: 50px;
+    border-radius: 20px;
+    background: #4ca58a;
+}
+}
+
+@media screen and (min-width:768px) and (max-width:1439px) {
+
+    main {
+        padding-top: 80px;
+    }
+     .menu-bar-mobile {
+        display: none;
+    }
+     .footer{
+        margin-bottom: 0px;
+    }
+
+    .container {
+        width: 375px;
+    }
+
+    .content {
+        width: 750px;
+        gap: 40px;
+    }
+
+    .definition {
+        width: 750px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .definition-info {
+        gap: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .definition-line {
+        display: flex;
+        gap: 20px;
+    }
+
+    .definition-text {
+        width: 750px;
+    }
+
+    .definition-text-frame {
+        display: flex;
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .footer-container {
+        width: 750px;
+    }
+
+    .definition-text .header {
+        font-size: 20px;
+    }
+
+    .definition-text h1 {
+        font-size: 40px;
+        line-height: 100%;
+    }
+
+    .definition-text .p-content {
+        font-size: 18px;
+    }
+
+    .definition-card {
+        width: 750px;
+    }
+
+    .card-title {
+
+        font-size: 16px;
+    }
+
+    .slider {
+        width: 750px;
+    }
+
+
+
+    .info-list {
+        width: 720px;
+        font-size: 16px;
+
+        .pro-tipps {
+            width: 195.92px;
+            height: 66px;
+        }
+    }
+
+    .pro-tipps {
+        width: 750px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .pro-tipps-title {
+        margin-top: -20px;
+        margin-left: 10px;
+    }
+
+    .pro-tipps-list {
+        width: 720px;
+        font-size: 16px;
+        margin-left: 0px;
+        margin-top: -10px;
+    }
+
+    .info {
+        font-size: 16px;
+    }
+
+    .follow-and-share {
+        width: 750px;
+    }
+
+    .follow-and-share>p {
+        font-size: 18px;
+    }
+
+    .follow-and-share>img {
+        width: 50px;
+        height: 30.41px;
+    }
+
+    .share-button a {
+        margin-top: -50px;
+    }
+
+    .follow-arrow {
+        width: 106.9px;
+        height: 65.03px;
+        border: 3px;
+        rotate: 34deg;
+        margin-left: -300px;
+        margin-top: -30px;
+    }
+
+    .follow-and-share>.share-buttons {
+        margin-left: 0;
+        flex-direction: column;
+    }
+
+    .share-popup-links {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .social-media-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 24px;
+        padding-right: 24px;
+        /* margin-bottom: 88px; */
+    }
+
+    .footer-left {
+        margin-left: 0;
+    }
+
+    .menu-bar-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    } 
+}
+@media screen and (min-width:320px) and (max-width:499px) {
+    /* 370px Mobil Kapsayıcı */
+        .slider-container {
+            width: 300px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            background: #ffffff;
+            padding: 30px 0;
+        }
+
+        /* Radyo Butonlarını Gizle */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Görsel Penceresi */
+        .slider-window {
+            width: 100%;
+            overflow: hidden;
+            padding: 0 60px; /* Ortadaki kartı merkezlemek için */
+        }
+
+        /* Kaydırıcı Alan */
+        .slider-content {
+            display: flex;
+            gap: 15px;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            width: max-content;
+        }
+
+        /* Figma: 200px x 293px Kart Yapısı */
+        .slider-element {
+            flex: 0 0 200px; 
+            height: 293px;   
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .slider-element img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* CSS İLE KAYDIRMA HESAPLAMALARI (200px kart + 15px gap = 215px öteleme) */
+        #slide1:checked ~ .slider-window .slider-content { transform: translateX(0px); }
+        #slide2:checked ~ .slider-window .slider-content { transform: translateX(-215px); }
+        #slide3:checked ~ .slider-window .slider-content { transform: translateX(-430px); }
+        #slide4:checked ~ .slider-window .slider-content { transform: translateX(-645px); }
+        #slide5:checked ~ .slider-window .slider-content { transform: translateX(-860px); }
+
+        /* Figma Navigasyon Noktaları (Pagination) */
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 30px;
+        }
+
+        .slider-nav label {
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-color: #a3d1c4; /* Pasif Nokta Rengi: Açık Mat Yeşil */
+            border-radius: 50%;
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+
+        /* HANGİ RADYO SEÇİLİYSE ONA AİT ETİKETİ (BUTONU) GENİŞLET VE RENKLENDİR */
+        #slide1:checked ~ .slider-nav label[for="slide1"],
+        #slide2:checked ~ .slider-nav label[for="slide2"],
+        #slide3:checked ~ .slider-nav label[for="slide3"],
+        #slide4:checked ~ .slider-nav label[for="slide4"],
+        #slide5:checked ~ .slider-nav label[for="slide5"] {
+            width: 48px; /* Figma genişleyen hap görünümü */
+            border-radius: 10px;
+            background-color: #4a9e86; /* Aktif Nokta Rengi: Koyu Piksel Yeşili */
+        }
+
+}
+@media screen and (min-width:500px) and (max-width:768px) {
+    /* 370px Mobil Kapsayıcı */
+        .slider-container {
+            width: 300px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            background: #ffffff;
+            padding: 30px 0;
+        }
+
+        /* Radyo Butonlarını Gizle */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Görsel Penceresi */
+        .slider-window {
+            width: 100%;
+            overflow: hidden;
+            padding: 0 85px; /* Ortadaki kartı merkezlemek için */
+        }
+
+        /* Kaydırıcı Alan */
+        .slider-content {
+            display: flex;
+            gap: 15px;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            width: max-content;
+        }
+
+        /* Figma: 200px x 293px Kart Yapısı */
+        .slider-element {
+            flex: 0 0 200px; 
+            height: 293px;   
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .slider-element img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* CSS İLE KAYDIRMA HESAPLAMALARI (200px kart + 15px gap = 215px öteleme) */
+        #slide1:checked ~ .slider-window .slider-content { transform: translateX(0px); }
+        #slide2:checked ~ .slider-window .slider-content { transform: translateX(-215px); }
+        #slide3:checked ~ .slider-window .slider-content { transform: translateX(-430px); }
+        #slide4:checked ~ .slider-window .slider-content { transform: translateX(-645px); }
+        #slide5:checked ~ .slider-window .slider-content { transform: translateX(-860px); }
+
+        /* Figma Navigasyon Noktaları (Pagination) */
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 30px;
+        }
+
+        .slider-nav label {
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-color: #a3d1c4; /* Pasif Nokta Rengi: Açık Mat Yeşil */
+            border-radius: 50%;
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+
+        /* HANGİ RADYO SEÇİLİYSE ONA AİT ETİKETİ (BUTONU) GENİŞLET VE RENKLENDİR */
+        #slide1:checked ~ .slider-nav label[for="slide1"],
+        #slide2:checked ~ .slider-nav label[for="slide2"],
+        #slide3:checked ~ .slider-nav label[for="slide3"],
+        #slide4:checked ~ .slider-nav label[for="slide4"],
+        #slide5:checked ~ .slider-nav label[for="slide5"] {
+            width: 48px; /* Figma genişleyen hap görünümü */
+            border-radius: 10px;
+            background-color: #4a9e86; /* Aktif Nokta Rengi: Koyu Piksel Yeşili */
+        }
+
+}
+
+
+@media screen and (min-width:768px) and (max-width:1439px) {
+        /* 370px Mobil Kapsayıcı */
+        .slider-container {
+            width: 300px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            background: #ffffff;
+            padding: 30px 0;
+        }
+
+        /* Radyo Butonlarını Gizle */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Görsel Penceresi */
+        .slider-window {
+            width: 100%;
+            overflow: hidden;
+            padding: 0 85px; /* Ortadaki kartı merkezlemek için */
+        }
+
+        /* Kaydırıcı Alan */
+        .slider-content {
+            display: flex;
+            gap: 15px;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            width: max-content;
+        }
+
+        /* Figma: 200px x 293px Kart Yapısı */
+        .slider-element {
+            flex: 0 0 150px; 
+            height: 250px;   
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .slider-element img {
+            width: 150px;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            /* padding-top: 8px; */
+            margin-top: 8px;
+        }
+
+        /* CSS İLE KAYDIRMA HESAPLAMALARI (200px kart + 15px gap = 215px öteleme) */
+        #slide1:checked ~ .slider-window .slider-content { transform: translateX(0px); }
+        #slide2:checked ~ .slider-window .slider-content { transform: translateX(-215px); }
+        #slide3:checked ~ .slider-window .slider-content { transform: translateX(-430px); }
+        #slide4:checked ~ .slider-window .slider-content { transform: translateX(-645px); }
+        #slide5:checked ~ .slider-window .slider-content { transform: translateX(-860px); }
+
+        /* Figma Navigasyon Noktaları (Pagination) */
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 30px;
+        }
+
+        .slider-nav label {
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-color: #a3d1c4; /* Pasif Nokta Rengi: Açık Mat Yeşil */
+            border-radius: 50%;
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+
+        /* HANGİ RADYO SEÇİLİYSE ONA AİT ETİKETİ (BUTONU) GENİŞLET VE RENKLENDİR */
+        #slide1:checked ~ .slider-nav label[for="slide1"],
+        #slide2:checked ~ .slider-nav label[for="slide2"],
+        #slide3:checked ~ .slider-nav label[for="slide3"],
+        #slide4:checked ~ .slider-nav label[for="slide4"],
+        #slide5:checked ~ .slider-nav label[for="slide5"] {
+            width: 48px; /* Figma genişleyen hap görünümü */
+            border-radius: 10px;
+            background-color: #4a9e86; /* Aktif Nokta Rengi: Koyu Piksel Yeşili */
+        }
+
+}
 
 @media screen and (min-width:1440px) and (max-width:1919px) {
     .container {
@@ -651,6 +1624,9 @@ a {
     .footer-container {
         width: 1200px;
     }
+    input[type="radio"] {
+            display: none;
+        }
 }
 
 @media screen and (min-width:1920px) {
@@ -670,5 +1646,7 @@ a {
     .footer-container {
         width: 1440px;
     }
-
+    input[type="radio"] {
+            display: none;
+        }
 }

@@ -16,20 +16,20 @@
                     <img src="./assets/icon/travel_blog_icon.svg" alt="Logo" class="logo">
                 </a>
                 <ul class="nav-links">
-                    <li><a href="#">
+                    <li><a href="homepage.html#highlights-id">
                             <div class="links">
                                 <p class="links-text">Highlights</p><img class="links-underline"
                                     src="./assets/icon/hover_highlights_linie.png">
                             </div>
                         </a></li>
-                    <li><a href="#">
+                    <li><a href="homepage.html#faq-id">
                             <div class="links">
                                 <p class="links-text">FAQ</p><img class="links-underline"
                                     style="width: 54.42px; height: 4.87px;    margin-top: -5px;"
                                     src="./assets/icon/hover_faq_linie.png">
                             </div>
                         </a></li>
-                    <li><a href="#">
+                    <li><a href="homepage.html#contact-id">
                             <div class="links">
                                 <p class="links-text">Contact</p><img class="links-underline"
                                     src="./assets/icon/hover_contact_linie.png">
@@ -61,21 +61,31 @@
                     </div>
 
                     <div class="definition-info">
-                        <div class="definition-info-item">
-                            <img src="./assets/icon/calendar_month.png" alt="calendar" class="article-img-calendar">
-                            <p class="article-text">Date: 26.01.2026</p>
+
+                        <div class="definition-line">
+
+                            <div class="definition-info-item">
+                                <img src="./assets/icon/calendar_month.png" alt="calendar" class="article-img-calendar">
+                                <p class="article-text">Date: 26.01.2026</p>
+                            </div>
+                            <div class="definition-info-item">
+                                <img src="./assets/icon/eyeglasses_2.png" alt="reading_time"
+                                    class="article-img-reading">
+                                <p class="article-text">Reading time: 6 min.</p>
+                            </div>
                         </div>
-                        <div class="definition-info-item">
-                            <img src="./assets/icon/eyeglasses_2.png" alt="reading_time" class="article-img-reading">
-                            <p class="article-text">Reading time: 6 min.</p>
-                        </div>
-                        <div class="definition-info-item">
-                            <img src="./assets/icon/visibility.png" alt="views" class="article-img-views">
-                            <p class="article-text">Read: 164</p>
-                        </div>
-                        <div class="definition-info-item">
-                            <img src="./assets/icon/share.png" alt="shared" class="article-img-shared">
-                            <p class="article-text">Shared: 18</p>
+
+                        <div class="definition-line">
+
+                            <div class="definition-info-item">
+                                <img src="./assets/icon/visibility.png" alt="views" class="article-img-views">
+                                <p class="article-text">Read: 164</p>
+                            </div>
+                            <div class="definition-info-item">
+                                <img src="./assets/icon/share.png" alt="shared" class="article-img-shared">
+                                <p class="article-text">Shared: 18</p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -100,18 +110,36 @@
 
             <section class="slider">
                 <h4 class="slider-title">TOP 5 beach destinations for 2026</h4>
-                <div class="slider-content">
-                    <!-- <div class="slider-element element1"></div>
-                    <div class="slider-element element2"></div>
-                    <div class="slider-element element3"></div>
-                    <div class="slider-element element4"></div>
-                    <div class="slider-element"></div> -->
-                    <div class="slider-element"><img src="./assets/img/Beach_01.jpg" alt="Beach_01"></div>
-                    <div class="slider-element"><img src="./assets/img/Beach_02.jpg" alt="Beach_02"></div>
-                    <div class="slider-element"><img src="./assets/img/Beach_03.jpg" alt="Beach_03"></div>
-                    <div class="slider-element"><img src="./assets/img/Beach_04.jpg" alt="Beach_04"></div>
-                    <div class="slider-element"><img src="./assets/img/Ozean.jpg" alt="Beach_05"></div>
-                </div>
+
+                <div class="slider-container">
+                    <!-- Gizli Kontrol Butonları -->
+                    <input type="radio" name="slider" id="slide1" checked>
+                    <input type="radio" name="slider" id="slide2">
+                    <input type="radio" name="slider" id="slide3">
+                    <input type="radio" name="slider" id="slide4">
+                    <input type="radio" name="slider" id="slide5">
+                    <!-- Görsel İçerik Alanı -->
+                    <div class="slider-window">
+                        <div class="slider-content">
+
+                            <div class="slider-element"><img src="./assets/img/Beach_01.jpg" alt="Beach_01"></div>
+                            <div class="slider-element"><img src="./assets/img/Beach_02.jpg" alt="Beach_02"></div>
+                            <div class="slider-element"><img src="./assets/img/Beach_03.jpg" alt="Beach_03"></div>
+                            <div class="slider-element"><img src="./assets/img/Beach_04.jpg" alt="Beach_04"></div>
+                            <div class="slider-element"><img src="./assets/img/Ozean.jpg" alt="Beach_05"></div>
+                        </div>
+
+                    </div>
+                     <!-- HTML Label Etiketleri (Tıklanabilir Butonlar) -->
+        <div class="slider-nav">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+            <label for="slide5"></label>
+        </div>
+
+    </div>
 
             </section>
 
@@ -195,10 +223,10 @@
                         </div>
                         <div class="links">
                             <div class="link-div">
-                                <a href=""">LinkedIn</a>
+                                <a href="https://www.linkedin.com/">LinkedIn</a>
                                 </div>
                                 <div class=" link-div">
-                                    <a href="">WhatsApp</a>
+                                    <a href="https://wa.me/905001234567" target="_blank">WhatsApp</a>
                             </div>
                         </div>
 
@@ -219,7 +247,7 @@
                     <span class="copyright-text">Travel Blog 2026</span>
                 </div>
                 <div class="footer-left-reverse">
-                    <a href="">Imprint</a>
+                    <a href="" class="slide-imprint">Imprint</a>
                     <a href="">Cookie Preferences</a>
                 </div>
 
@@ -241,6 +269,16 @@
             </div>
 
         </div>
+    </section>
+
+    <section class="menu-bar-mobile">
+        <div class="menu-bar-container">
+            <a href="homepage.html"><img src="./assets/icon/home_icon.svg" alt="home-icon"></a>
+            <a href="homepage.html#highlights-id"><img src="./assets/icon/rocket_launch_icon.svg" alt="rocket-icon"></a>
+            <a href="homepage.html#faq-id"><img src="./assets/icon/live_help_icon.svg" alt="help-icon"></a>
+            <a href="homepage.html#contact-id"><img src="./assets/icon/person_pin_icon.svg" alt="person-icon"></a>
+        </div>
+
     </section>
 </body>
 
