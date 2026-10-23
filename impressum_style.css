@@ -1,0 +1,166 @@
+
+/* Arima Regular */
+@font-face {
+    font-display: swap;
+    font-family: 'Arima';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/arima-v7-latin-regular.woff2') format('woff2');
+}
+
+/* Palanquin Regular */
+@font-face {
+    font-display: swap;
+    font-family: 'Palanquin';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2');
+}
+
+/* Palanquin Dark Regular */
+@font-face {
+    font-display: swap;
+    font-family: 'Palanquin Dark';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/palanquin-dark-v17-latin-regular.woff2') format('woff2');
+}
+
+
+/* Imprint */
+
+.imprint-page {
+    font-family: 'Palanquin', sans-serif;
+}
+
+.imprint-main {
+    width: 100%;
+    max-width: 1440px;
+    padding: 96px 120px 128px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.imprint-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Back-Link */
+
+.imprint-back-link {
+    font-family: 'Palanquin', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #4EA487;
+    text-decoration: none;
+}
+
+.imprint-back-link:hover {
+    text-decoration: underline;
+}
+
+/* Headline */
+
+.imprint-container h1 {
+    font-family: 'Arima', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: #4EA487;
+}
+
+/* Imprint Details */
+
+.imprint-details {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding-left: 32px;
+    border-left: 6px solid #F1CD53;
+}
+
+.imprint-details section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.imprint-details h2 {
+    font-family: 'Palanquin Dark', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #54370D;
+}
+
+.imprint-details p,
+.imprint-details address {
+    font-family: 'Palanquin', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    color: #54370D;
+}
+
+.imprint-details a {
+    font-family: 'Palanquin', sans-serif;
+    color: #4EA487;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.imprint-details a:hover {
+    text-decoration: underline;
+}
+
+
+/* Tablet */
+
+@media screen and (min-width: 786px) and (max-width: 1220px) {
+
+    .imprint-main {
+        padding: 80px 40px 120px;
+    }
+
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 785px) {
+
+    .imprint-page {
+        padding-bottom: 0;
+    }
+
+    .imprint-main {
+        padding: 56px 20px 80px;
+    }
+
+    .imprint-container {
+        gap: 32px;
+    }
+
+    .imprint-container h1 {
+        font-size: 40px;
+    }
+
+    .imprint-details {
+        gap: 32px;
+        padding-left: 20px;
+        border-left-width: 4px;
+    }
+
+    .imprint-details h2 {
+        font-size: 24px;
+    }
+
+    .imprint-details p,
+    .imprint-details address {
+        font-size: 18px;
+    }
+
+}
