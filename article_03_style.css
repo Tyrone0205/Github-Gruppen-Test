@@ -409,9 +409,9 @@ font-size: 40px;
 
 
 
-
-
-
+.share-section {
+    gap: 48px;
+}
 
 .footer-inline {
     flex-direction: column;
