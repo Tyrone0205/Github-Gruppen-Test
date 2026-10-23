@@ -324,6 +324,10 @@ padding-bottom: 88px;
     height: 32px;
 }
 
+.menu-bar-mobile {
+    display: none;
+}
+
 @media screen and (max-width: 600px) {
 
     .inline, main {
@@ -442,24 +446,34 @@ font-size: 40px;
 
 .footer {
     height: auto;
+    display: block;
+    padding-bottom: 88px;
 }
 .footer-inline {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
     height: auto;
+    padding: 30px 24px;
 }
 
 .footer-nav {
     flex-direction: column;
+    gap: 8px;
 }
 
 .footer-links {
     flex-direction: column;
     align-items: flex-start;
-
-
+    gap: 8px;
 }
+.socials {
+    gap: 16px;
+}
+.socials img {
+    height: 24px;
+}
+
 
 .menu-bar-mobile {
     display: flex;
@@ -478,7 +492,4 @@ font-size: 40px;
 
 }
 
-body {
-    padding-bottom: 88px;
-}
 }
