@@ -434,6 +434,10 @@ font-size: 40px;
     gap: 48px;
 }
 
+
+.footer {
+    height: auto;
+}
 .footer-inline {
     flex-direction: column;
     align-items: flex-start;
