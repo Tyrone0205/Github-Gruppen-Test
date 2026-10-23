@@ -53,28 +53,70 @@ main {
 .inline {
     max-width: 1440px;
     margin: auto;
-    padding: 0 146px;
+    padding: 0 120px;
     display: flex;
     align-items: center;
     height: 128px;
     font-size: 24px;
-    gap: 102px;
+    gap: 100px;
 }
 
 .nav-bar {
     display: flex;
-    gap: 72px;
+    gap: 100px;
 }
 
-
-.nav-bar a {
-    font-family: 'Arima';
+.nav-bar >a {
+    position: relative;
     color: white;
+    font-size: 24px;
+    font-family: 'Arima';
+    font-weight: 700;
     text-decoration: none;
 }
 
-.nav-bar a:hover {
-   border-bottom: 2px solid rgba(241, 201, 83, 1);
+/* Nur die Unterstreichungen im Header ausblenden */
+.nav-bar >a>img {
+    display: none;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+/* Unterstreichung beim Hover anzeigen */
+.nav-bar >a:hover>img {
+    display: block;
+}
+
+/* Individuelle Größen der Unterstreichungen */
+.underline-highlights {
+    width: 120px;
+    height: 13px;
+}
+
+.underline-faq {
+    top: 70%;
+    width: 54px;
+    height: 5px;
+}
+
+.underline-contact {
+    width: 90px;
+    height: 7px;
+}
+
+/* Aktuell ausgewählten Navigationspunkt gelb färben */
+body:has(#highlights-id:target) nav>a[href="#highlights-id"],
+body:has(#faQ-id:target) nav>a[href="#faQ-id"],
+body:has(#contact-id:target) nav>a[href="#contact-id"] {
+    color: #F1CD53;
+}
+
+/* Unterstreichung beim Hover anzeigen */
+nav>a:hover>img {
+    display: block;
 }
 
 .logo {
@@ -190,6 +232,7 @@ main {
 .grafik-section h2 {
     font-family: 'Arima';
     font-weight: 600;
+    font-size: 32px;
 
 }
 
