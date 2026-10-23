@@ -725,11 +725,21 @@ footer {
     padding: 0px 120px;
 }
 
-.footer-information p {
+.footer-information p,
+.footer-information>a {
     font-family: 'Palanquin';
     font-size: 18px;
     font-weight: 400;
     line-height: 120%;
+}
+
+.footer-information>a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-information > a:hover {
+    text-decoration: underline;
 }
 
 .footer-information {
@@ -947,7 +957,8 @@ footer {
         gap: clamp(12px, 2vw, 32px);
     }
 
-    .footer-information p {
+    .footer-information p,
+    .footer-information>a {
         font-size: clamp(13px, 1.4vw, 16px);
     }
 
@@ -1083,8 +1094,9 @@ footer {
         gap: 12px;
     }
 
-    .footer-information p {
-        font-size: 16px;
+    .footer-information p,
+    .footer-information>a {
+        font-size: clamp(13px, 4vw, 16px);
     }
 
     .copyright-information {
