@@ -14,7 +14,7 @@
     font-family: 'Palanquin';
     font-style: normal;
 
-    src: url('.assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2');
+    src: url('./assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -334,6 +334,7 @@ main {
     line-height: 120%;
     letter-spacing: 0%;
     color: rgba(61, 61, 61, 1);
+    margin-top: 20px;
 }
 
 .info-list {
@@ -583,7 +584,7 @@ a {
 }
 
 .share-popup-links {
-    margin-top: -90px;
+    margin-top: -80px;
     visibility: hidden;
 }
 
@@ -644,7 +645,7 @@ a {
 
 @media screen and (max-width:1439px) {
     .footer-left-reverse>.slide-imprint {
-        margin-left: -90px;
+        margin-left: -80px;
     }
 
     /* .footer {
@@ -680,7 +681,7 @@ a {
         flex-direction: column-reverse;
         gap: 8px;
         align-items: left;
-        margin-left: -90px;
+        margin-left: -80px;
     }
 
 
@@ -709,12 +710,12 @@ a {
     }
 
     .content {
-        width: 310px;
+        width: 280px;
         gap: 40px;
     }
 
     .definition {
-        width: 310px;
+        width: 280px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -734,7 +735,7 @@ a {
     }
 
     .definition-text {
-        width: 310px;
+        width: 280px;
     }
 
     .definition-text-frame {
@@ -745,7 +746,7 @@ a {
     }
 
     .footer-container {
-        width: 310px;
+        width: 280px;
     }
 
     .definition-text .header {
@@ -762,7 +763,7 @@ a {
     }
 
     .definition-card {
-        width: 310px;
+        width: 280px;
     }
 
     .card-title {
@@ -771,12 +772,12 @@ a {
     }
 
     .slider {
-        width: 310px;
+        width: 300px;
     }
 
 
     .info-list {
-        width: 300px;
+        width: 270px;
         font-size: 16px;
 
         .pro-tipps {
@@ -786,7 +787,7 @@ a {
     }
 
     .pro-tipps {
-        width: 310px;
+        width: 280px;
         font-size: 16px;
         margin-top: 20px;
     }
@@ -797,7 +798,7 @@ a {
     }
 
     .pro-tipps-list {
-        width: 310px;
+        width: 280px;
         font-size: 16px;
         margin-left: 0px;
         margin-top: -10px;
@@ -808,7 +809,7 @@ a {
     }
 
     .follow-and-share {
-        width: 310px;
+        width: 280px;
     }
 
     .follow-and-share>p {
@@ -867,6 +868,9 @@ a {
 
     .footer-left {
         margin-left: 0;
+    }
+     .footer-right {
+        gap: 10px;
     }
 
 }
@@ -1043,7 +1047,7 @@ a {
 
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:1439px){
     .slider {
         max-width: 100%;
         padding-left: 20px;
@@ -1243,12 +1247,6 @@ a {
         font-size: 16px;
     }
 
-    .slider {
-        width: 750px;
-    }
-
-
-
     .info-list {
         width: 720px;
         font-size: 16px;
@@ -1433,10 +1431,10 @@ a {
         }
 
 }
-@media screen and (min-width:500px) and (max-width:768px) {
+@media screen and (min-width:500px) and (max-width:1439px) {
     /* 370px Mobil Kapsayıcı */
         .slider-container {
-            width: 300px;
+            width: 400px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -1520,95 +1518,6 @@ a {
 
 }
 
-
-@media screen and (min-width:768px) and (max-width:1439px) {
-        /* 370px Mobil Kapsayıcı */
-        .slider-container {
-            width: 300px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            background: #ffffff;
-            padding: 30px 0;
-        }
-
-        /* Radyo Butonlarını Gizle */
-        input[type="radio"] {
-            display: none;
-        }
-
-        /* Görsel Penceresi */
-        .slider-window {
-            width: 100%;
-            overflow: hidden;
-            padding: 0 85px; /* Ortadaki kartı merkezlemek için */
-        }
-
-        /* Kaydırıcı Alan */
-        .slider-content {
-            display: flex;
-            gap: 15px;
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            width: max-content;
-        }
-
-        /* Figma: 200px x 293px Kart Yapısı */
-        .slider-element {
-            flex: 0 0 150px; 
-            height: 250px;   
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-        }
-
-        .slider-element img {
-            width: 150px;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-            /* padding-top: 8px; */
-            margin-top: 8px;
-        }
-
-        /* CSS İLE KAYDIRMA HESAPLAMALARI (200px kart + 15px gap = 215px öteleme) */
-        #slide1:checked ~ .slider-window .slider-content { transform: translateX(0px); }
-        #slide2:checked ~ .slider-window .slider-content { transform: translateX(-215px); }
-        #slide3:checked ~ .slider-window .slider-content { transform: translateX(-430px); }
-        #slide4:checked ~ .slider-window .slider-content { transform: translateX(-645px); }
-        #slide5:checked ~ .slider-window .slider-content { transform: translateX(-860px); }
-
-        /* Figma Navigasyon Noktaları (Pagination) */
-        .slider-nav {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 30px;
-        }
-
-        .slider-nav label {
-            display: block;
-            width: 16px;
-            height: 16px;
-            background-color: #a3d1c4; /* Pasif Nokta Rengi: Açık Mat Yeşil */
-            border-radius: 50%;
-            transition: all 0.25s ease;
-            cursor: pointer;
-        }
-
-        /* HANGİ RADYO SEÇİLİYSE ONA AİT ETİKETİ (BUTONU) GENİŞLET VE RENKLENDİR */
-        #slide1:checked ~ .slider-nav label[for="slide1"],
-        #slide2:checked ~ .slider-nav label[for="slide2"],
-        #slide3:checked ~ .slider-nav label[for="slide3"],
-        #slide4:checked ~ .slider-nav label[for="slide4"],
-        #slide5:checked ~ .slider-nav label[for="slide5"] {
-            width: 48px; /* Figma genişleyen hap görünümü */
-            border-radius: 10px;
-            background-color: #4a9e86; /* Aktif Nokta Rengi: Koyu Piksel Yeşili */
-        }
-
-}
 
 @media screen and (min-width:1440px) and (max-width:1919px) {
     .container {
