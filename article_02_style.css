@@ -288,6 +288,9 @@ nav>a:hover>img {
     display: flex;
     flex-direction: row;
     gap:6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     
 }
 
@@ -951,6 +954,7 @@ footer {
 
 
 
+
 .cta-share-arrow {
     width: 90px;
     padding-left: 0;
@@ -975,6 +979,21 @@ footer {
         padding-bottom: 24px;
     }
 
+
+    .main-bottom-text {
+    font-size: 16px;
+}
+
+
+.info-text {
+    font-size: 16px;
+}
+
+.pro-tipp-box li {
+    font-size: 16px;
+}
+
+
 }
 
 
@@ -985,6 +1004,7 @@ footer {
     width: 250px;
     position: relative;
     left: -8px;
+
 }
 
 }
@@ -1043,5 +1063,16 @@ footer {
 
 
 
-   
+
+@media screen and (min-width: 791px) and (max-width: 1439px) {
+
+    .header-content {
+        padding-left: 20px;
+        padding-right: 16px;
+    }
+
+}
+
+
+
 
