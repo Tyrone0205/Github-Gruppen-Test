@@ -456,6 +456,7 @@ line-height: 120%;
     .two-grafik img {
         width: 100%;
         height: min(32.7vw, 471px);
+        max-width: 519px;
     }
 
     .copyright {
@@ -569,6 +570,7 @@ font-size: 40px;
 .two-grafik img {
     width: 100%;
     height: auto;
+    max-width: 519px;
 
 }
 
